@@ -1,4 +1,4 @@
-
+ 
 start:
   - play ocean:
   - effect SHOWTITLE: 
@@ -30,7 +30,8 @@ start:
   # - show spaceship: WITH FADE
   - play ocean:
   - show ice: WITH FADE
-#   - show traveller: happy WITH FADE
+  - show traveller: happy WITH FADE
+  - scene: start
 #   - traveller says: If you are familiar with any of those you have an advantage.
 #   - traveller says: And if not...
 #   # - show traveller: normal
