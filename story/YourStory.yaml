@@ -1,20 +1,32 @@
 
 start:
-  - play morningBGM:
+  - play ocean:
   - effect SHOWTITLE: 
     title: Chapter 1
     subtitle: Ice Hauling 
   - show kepler: WITH FADE
-  - show traveller: normal AT CENTER WITH FADE
-  - traveller says: Welcome to our Tutorial Game!
-  - traveller says: My name is travellerlene and I'll be your guide.
-  - show traveller: normal
-  - traveller says: So you want to make a Visual Novel.
-  - traveller says: With RenJS you can easily make games just like this one.
-  - traveller says: RenJS is inspired by Ren'Py and based on PhaserJS.
+  - show spaceship: WITH FADE
+  # - show traveller: normal AT CENTER WITH FADE
+  - traveller says: The search for ice is going well
+  - traveller says: system shows high percentage of ice in Kepler 254 C.
+  - hide spaceship: WITH FADE
+  - show inside_ship: WITH FADE
+  - show traveller: normal WITH FADE
+  - traveller says: This trip should leave us with more than a month's supply of water
+  - traveller says: -ends transmission-
+  - hide traveller: WITH FADE
+  - show kepler: WITH FADE
+  - show spaceship: WITH FADE
+  - stop ocean:
+  - play intenseSFX:
+  - system says: ~approaching Kepler 254 C~
+  - traveller says: god I love these new F450X fissure reactors.
+  - hide spaceship: WITH FADE
+  - hide kepler:
+  - show 
   - traveller says: If you are familiar with any of those you have an advantage.
   - traveller says: And if not...
-  - show traveller: normal
+  # - show traveller: normal
   - traveller says: No problem!
   - traveller says: RenJS is made so the text of your story is written intuitively like a script. 
   - show traveller: normal
@@ -24,18 +36,18 @@ start:
   - traveller says: That is, all the files you need for your game to work properly.
   - traveller says: We'll use this game as an example.
   - traveller says: Have you downloaded it yet?
-  - choice:
-    - I have it!:
-      - show traveller: normal
-      - traveller says: Great! What a hardworking student.
-    - Not yet:
-      - show traveller: normal
-      - traveller says: What are you waiting for!?
-      - traveller says: Go do it, I'll wait...
-      - choice:
-        - I have it!:
-          - show traveller: normal
-          - traveller says: Good! Let's continue.
+  # - choice:
+  #   - I have it!:
+  #     - show traveller: normal
+  #     - traveller says: Great! What a hardworking student.
+  #   - Not yet:
+  #     - show traveller: normal
+  #     - traveller says: What are you waiting for!?
+  #     - traveller says: Go do it, I'll wait...
+  #     - choice:
+  #       - I have it!:
+  #         - show traveller: normal
+  #         - traveller says: Good! Let's continue.
   - show traveller: normal
   - traveller says: Now, open the root folder of this game.
   - traveller says: It should look like this.
@@ -201,7 +213,7 @@ storySetup:
   - show setupaudio: AT 400,350
   - traveller says: You can have music, and you can have sfx.
   - traveller says: The music will usually be looped, while the sfx will play just once.
-  - traveller says: For example, the current background music is morningBGM.
+  - traveller says: For example, the current background music is ocean.
   - traveller says: Let's make a phone call and check the ringtone...
   - show phone1: AT 400,300
   - play ringtoneSFX:
@@ -314,7 +326,7 @@ writingTheStory:
   - scene: interval
 
 interval:
-  - stop morningBGM: WITH FADE
+  - stop ocean: WITH FADE
   - show room_night:
   - show room_night_light: WITH FUSION
   - play cicadas: WITH FADE
@@ -347,7 +359,7 @@ interval:
   - scene: storeAtNight
 
 storeAtNight:
-  - play storeBGM:
+  # - play storeBGM:
   - show store:
   - show liz: happyC WITH FADE
   - liz says: traveller!!! Over here!
@@ -463,7 +475,7 @@ backToTheRoom:
   - scene: day2
 
 day2:
-  - play morningBGM:
+  - play ocean:
   - show school_morning: WITH FADE
   - show traveller: normal AT CENTER WITH FADE
   - traveller says: Welcome back!

@@ -1,14 +1,15 @@
 backgrounds:
-  bus_station: assets/backgrounds/bus_station_afternoon.jpg
-  room: assets/backgrounds/room_day.jpg
-  room_night: assets/backgrounds/room_night.jpg
-  room_night_light: assets/backgrounds/room_night_light.jpg
-  school_morning: assets/backgrounds/school_corridor.jpg
-  school_afternoon: assets/backgrounds/school_corridor_afternoon.jpg
-  street_morning: assets/backgrounds/school_front_morning.jpg
-  street_afternoon: assets/backgrounds/school_front_afternoon.jpg
-  store: assets/backgrounds/store.jpg
+  # bus_station: assets/backgrounds/bus_station_afternoon.jpg
+  # room: assets/backgrounds/room_day.jpg
+  # room_night: assets/backgrounds/room_night.jpg
+  # room_night_light: assets/backgrounds/room_night_light.jpg
+  # school_morning: assets/backgrounds/school_corridor.jpg
+  # school_afternoon: assets/backgrounds/school_corridor_afternoon.jpg
+  # street_morning: assets/backgrounds/school_front_morning.jpg
+  # street_afternoon: assets/backgrounds/school_front_afternoon.jpg
+  # store: assets/backgrounds/store.jpg
   kepler: assets/backgrounds/kepler_solar system_2.png
+  inside_ship: assets/backgrounds/spaceship-inside_2.png
 characters:
   traveller:
     displayName: Traveller
@@ -20,9 +21,9 @@ characters:
       happyC: assets/characters/astronaut_2_v2.png
       normalC: assets/characters/astronaut_1_v2.png
       angryC: assets/characters/Char3Angry.png
-  liz:
-    displayName: Liz
-    speechColour: "#d5e6e7"
+  system:
+    displayName: system
+    speechColour: "#fff"
     looks:
       normal: assets/characters/Char2NormalSchool.png
       happy: assets/characters/Char2HappySchool.png
@@ -54,6 +55,7 @@ characters:
 cgs:
   phone1: assets/objects/phone1.png
   phone2: assets/objects/phone2.png
+  spaceship: assets/objects/spaceship-outside.png
   folders: assets/lessons/folders.png
   setupbg: assets/lessons/lessonsetupbg.png
   setupch: assets/lessons/lessonsetupch.png
@@ -84,14 +86,16 @@ cgs:
   lessonGUISliders: assets/lessons/lessonGUISliders.png
 music:
   rollingCredits: assets/audio/Evan_Schaeffer_-_01_-_Aqueduct.mp3
-  morningBGM: assets/audio/Evan_Schaeffer_-_03_-_Glow.mp3
-  storeBGM: assets/audio/Evan_Schaeffer_-_18_-_Big_Tree.mp3
-  cicadas: assets/audio/Cicada.mp3
+  # morningBGM: assets/audio/Evan_Schaeffer_-_03_-_Glow.mp3
+  # storeBGM: assets/audio/Evan_Schaeffer_-_18_-_Big_Tree.mp3
+  # cicadas: assets/audio/Cicada.mp3
   rain: assets/audio/Rain.mp3
+  ocean: assets/audio/ocean_train.mp3
 sfx:
   ringtoneSFX: assets/audio/nokia6210-24-elise.mp3
   ringtoneSFX2: assets/audio/alcatel-top_secret.mp3
   thunderSFX: assets/audio/thunder_strike_1.mp3
+  intenseSFX: assets/audio/intense_rocket.mp3
 extra:
   image:
     title: assets/gui/titles.png
