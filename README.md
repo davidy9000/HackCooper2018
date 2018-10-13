@@ -9,3 +9,4 @@ https://davidy9000.github.io/HackCooper2018/
 * **Josh**  [joshnatis](https://github.com/joshnatis)
 * **Pete**  [petewins](https://github.com/petewins)
 * **Vlad**  [bvv218](https://github.com/bvv218)
+* **Vincent** [PokeLegoCuber](https://github.com/PokeLegoCuber)
