@@ -21,947 +21,952 @@ start:
   - play intenseSFX:
   - system says: ~approaching Kepler 254 C~
   - traveller says: god I love these new F450X fissure reactors.
-  - hide spaceship: WITH FADE
   - hide kepler:
+  - hide spaceship: WITH FADE
+  - show star_background: WITH FADE
+  - show iceplanet:
+  - wait: 300
+  - hide iceplanet:
+  # - show spaceship: WITH FADE
   - play ocean:
   - show ice: WITH FADE
-  - show traveller: happy WITH FADE
-  - traveller says: If you are familiar with any of those you have an advantage.
-  - traveller says: And if not...
-  # - show traveller: normal
-  - traveller says: No problem!
-  - traveller says: RenJS is made so the text of your story is written intuitively like a script. 
-  - show traveller: normal
-  - traveller says: Once you learn the structure, there's no limit to what you can create.
-  - traveller says: So let's start with...
-  - traveller says: First thing we'll check is the file structure.
-  - traveller says: That is, all the files you need for your game to work properly.
-  - traveller says: We'll use this game as an example.
-  - traveller says: Have you downloaded it yet?
-  # - choice:
-  #   - I have it!:
-  #     - show traveller: normal
-  #     - traveller says: Great! What a hardworking student.
-  #   - Not yet:
-  #     - show traveller: normal
-  #     - traveller says: What are you waiting for!?
-  #     - traveller says: Go do it, I'll wait...
-  #     - choice:
-  #       - I have it!:
-  #         - show traveller: normal
-  #         - traveller says: Good! Let's continue.
-  - show traveller: normal
-  - traveller says: Now, open the root folder of this game.
-  - traveller says: It should look like this.
-  - show traveller: AT LEFT WITH MOVE
-  - show folders: AT 550,300 WITH FADE
-  - traveller says: There are four folders and a file.
-  - traveller says: RenJS is web based, that means the game runs as a webpage.
-  - traveller says: index.html is the page that contains this game.
-  - traveller says: You can play the game locally by opening this file with a web browser.
-  - traveller says: The folder named RenJS is where the engine's files are located.
-  - traveller says: And the folder libs contains the engine's external dependencies, like PhaserJS.
-  - traveller says: If you're making a simple game, you shouldn't worry about any of this.
-  - traveller says: The files that concern you as a writer are inside the Story folder.
-  - traveller says: These YAML files are what you will use to make your game.
-  - traveller says: YAML is a human readable data serialization language.
-  - traveller says: That means that the files contain data in a structure that you can read easily.
-  - traveller says: And how do you open and edit them?
-  - show traveller: normal
-  - traveller says: With your favourite text editor!
-  - traveller says: Mine is Sublime Text, a lightweight and multiplatform text editor.
-  - show traveller: normal
-  - traveller says: In any case, the most important thing about YAML files is that indentation is super important.
-  - traveller says: If you screw up the indentation the game won't even load!
-  - show traveller: normal
-  - traveller says: So be very careful about it. Only two spaces per level!
-  - show traveller: normal
-  - traveller says: Ok, that was a lot of information, don't you think?
-  - choice:
-    - Yes, I'm already tired:
-      - show traveller: normal
-      - traveller says: I was hoping you'd say that!
-      - traveller says: You can save from the quick menu here on the side and return later!
-    - No, I want to know more:
-      - show traveller: normal
-      - traveller says: I knew it!
-      - traveller says: I have a feeling you're not stopping until you write your first story
-      - traveller says: Isn't that exciting?
-  - show traveller: normal
-  - traveller says: All right, I'm going to take a break anyways.
-  - traveller says: But I'm leaving you in good hands.
-  - show traveller: normal
-  - traveller says: Good luck!
-  - hide traveller: WITH FADE
-  - scene: storySetup
+#   - show traveller: happy WITH FADE
+#   - traveller says: If you are familiar with any of those you have an advantage.
+#   - traveller says: And if not...
+#   # - show traveller: normal
+#   - traveller says: No problem!
+#   - traveller says: RenJS is made so the text of your story is written intuitively like a script. 
+#   - show traveller: normal
+#   - traveller says: Once you learn the structure, there's no limit to what you can create.
+#   - traveller says: So let's start with...
+#   - traveller says: First thing we'll check is the file structure.
+#   - traveller says: That is, all the files you need for your game to work properly.
+#   - traveller says: We'll use this game as an example.
+#   - traveller says: Have you downloaded it yet?
+#   # - choice:
+#   #   - I have it!:
+#   #     - show traveller: normal
+#   #     - traveller says: Great! What a hardworking student.
+#   #   - Not yet:
+#   #     - show traveller: normal
+#   #     - traveller says: What are you waiting for!?
+#   #     - traveller says: Go do it, I'll wait...
+#   #     - choice:
+#   #       - I have it!:
+#   #         - show traveller: normal
+#   #         - traveller says: Good! Let's continue.
+#   - show traveller: normal
+#   - traveller says: Now, open the root folder of this game.
+#   - traveller says: It should look like this.
+#   - show traveller: AT LEFT WITH MOVE
+#   - show folders: AT 550,300 WITH FADE
+#   - traveller says: There are four folders and a file.
+#   - traveller says: RenJS is web based, that means the game runs as a webpage.
+#   - traveller says: index.html is the page that contains this game.
+#   - traveller says: You can play the game locally by opening this file with a web browser.
+#   - traveller says: The folder named RenJS is where the engine's files are located.
+#   - traveller says: And the folder libs contains the engine's external dependencies, like PhaserJS.
+#   - traveller says: If you're making a simple game, you shouldn't worry about any of this.
+#   - traveller says: The files that concern you as a writer are inside the Story folder.
+#   - traveller says: These YAML files are what you will use to make your game.
+#   - traveller says: YAML is a human readable data serialization language.
+#   - traveller says: That means that the files contain data in a structure that you can read easily.
+#   - traveller says: And how do you open and edit them?
+#   - show traveller: normal
+#   - traveller says: With your favourite text editor!
+#   - traveller says: Mine is Sublime Text, a lightweight and multiplatform text editor.
+#   - show traveller: normal
+#   - traveller says: In any case, the most important thing about YAML files is that indentation is super important.
+#   - traveller says: If you screw up the indentation the game won't even load!
+#   - show traveller: normal
+#   - traveller says: So be very careful about it. Only two spaces per level!
+#   - show traveller: normal
+#   - traveller says: Ok, that was a lot of information, don't you think?
+#   - choice:
+#     - Yes, I'm already tired:
+#       - show traveller: normal
+#       - traveller says: I was hoping you'd say that!
+#       - traveller says: You can save from the quick menu here on the side and return later!
+#     - No, I want to know more:
+#       - show traveller: normal
+#       - traveller says: I knew it!
+#       - traveller says: I have a feeling you're not stopping until you write your first story
+#       - traveller says: Isn't that exciting?
+#   - show traveller: normal
+#   - traveller says: All right, I'm going to take a break anyways.
+#   - traveller says: But I'm leaving you in good hands.
+#   - show traveller: normal
+#   - traveller says: Good luck!
+#   - hide traveller: WITH FADE
+#   - scene: storySetup
 
-storySetup:
-  - show school_morning:
-  - show traveller:
-  - traveller says: So you're the new student.
-  - traveller says: I've heard a lot about you from traveller.
-  - traveller says: She gets easily excited.
-  - show traveller: normal
-  - traveller says: But with me, you'll have to prove yourself first.
-  - traveller says: Do you have what it takes to be a visual novel writer?
-  - show traveller: normal
-  - traveller says: We'll see.
-  - traveller says: I'm traveller, btw.
-  - traveller says: But you should know that, since my name is on display right above the text box.
-  - traveller says: I'm here to show you how to setup your story.
-  - effect SHOWTITLE: 
-    title: Chapter 2
-    subtitle: Setting up the story
-  - traveller says: All the setup is contained in the Setup.yaml file.
-  - traveller says: What this means is.
-  - traveller says: All your characters, music, sfx and everything else you're planning to use on the story.
-  - traveller says: Needs to be declared on this file.
-  - traveller says: And of course, you need to know everything before even start to write your story.
-  - traveller says: What kind of writer doesn't though...
-  - wait: 300
-  - show traveller: normal
-  - traveller says: Just joking!
-  - traveller says: You won't always know what things you need for a story.
-  - traveller says: So every time you add something, remember to also add it to the setup file.
-  - show traveller: normal
-  - traveller says: Let's see how it's made.
-  - show traveller: AT RIGHT WITH MOVE
-  - show setupbg: AT 400,350 WITH FADE
-  - traveller says: First tag you need is setup.
-  - traveller says: Inside the setup, indented by two spaces you declare each kind of object.
-  - traveller says: The first we have is backgrounds.
-  - traveller says: Each background has a tag, the name that will be used to refer to that background on the story.
-  - traveller says: And the path to where the background image is located.
-  - traveller says: If you go to the game's assets folder, you'll find all the images we can use here.
-  - show traveller: normal
-  - traveller says: Seems like we have an afternoon background.
-  - traveller says: Let's use it so I can go home sooner.
-  - show school_afternoon: WITH FUSION
-  - hide setupbg: WITH FADE
-  - traveller says: Well, time to go home.
-  - traveller says: See you.
-  - show traveller: normal AT LEFT WITH MOVE
-  - show traveller: normal AT RIGHT
-    flipped: true
-  - traveller says: Not so fast!
-  - show traveller: normal
-    flipped: true
-  - traveller says: Uh oh.
-  - traveller says: Where do you think you're going? There's a lot more to say about the setup!
-  - traveller says: Your student is smart enought to get it without my help.
-  - traveller says: What? Do you agree with that?
-  - choice:
-    - Yeah, I checked the file by myself:
-      - show traveller: normal
-      - traveller says: Alright, I guess you can continue with more advanced lessons then...
-      - show traveller: normal
-      - traveller says: See, told you not to treat 'em like a baby.
-      - show traveller: normal
-      - traveller says: Shut up, you! We'll have a talk later.
-      - hide traveller: WITH FADE
-      - show traveller: normal
-      - traveller says: Ok, the next lesson starts soon, maybe you should save and rest before moving on.
-      - traveller says: It's going to be long, but it'll probably be easy for you.
-      - show traveller: normal
-      - traveller says: And the teacher is great! She's my best friend.
-      - traveller says: Good luck!
-      - scene: writingTheStory
-    - We barely saw the first part!:
-      - traveller says: Come back here you ratbag, and finish the lesson!
-      - traveller says: Ok boss, don't worry.
-      - hide traveller: WITH FADE
-  - show traveller: normal
-  - traveller says: What a snitch.
-  - show traveller: normal
-  - traveller says: Anyway, let's see the next part.
-  - traveller says: Characters.
-  - traveller says: The characters are... you know what a character is, come on.
-  - show setupch: AT 400,300 WITH FADE
-  - traveller says: Ok so, inside the characters tag, each character is declared after its own tag.
-  - traveller says: Same as the backgrounds, this tag will be used to refer to this character on the text of your story.
-  - traveller says: Every time you need to use travellerlene, you will use her tag, traveller.
-  - traveller says: Characters also have a display name, that's the name that will apear on the name box when we talk.
-  - traveller says: The display name can have whitespaces, accents and whatever you want.
-  - traveller says: If you omit it, the tag will be used as the name.
-  - traveller says: The speech colour is the colour to write the name in the name box.
-  - traveller says: And then you have a list of looks.
-  - traveller says: A look is an image representing a state of the character.
-  - traveller says: You always need a normal look, that will be the default.
-  - traveller says: And you can have as many additional looks as you want.
-  - traveller says: traveller here can be happy or angry.
-  - show traveller: normal
-  - traveller says: Her range of emotions is infinite though.
-  - traveller says: Believe me.
-  - show traveller: normal
-  - hide setupch:
-  - traveller says: Next up is cgs.
-  - show setupcgs: 400,350 WITH FADE
-  - traveller says: CGs stands for Computer Graphics.
-  - traveller says: It's an image that you can display and animate.
-  - show traveller: normal
-  - traveller says: It should have a better name, I know.
-  - traveller says: But for now, it's what we have.
-  - show traveller: normal
-  - traveller says: Same as always, you have the cgs tag, and then each cgs has a tag and an image file.
-  - traveller says: We have two phones.
-  - traveller says: Could one of those be mine?
-  - show phone1: AT 600,300
-  - show phone2: AT 380,300
-  - traveller says: I don't think so!
-  - hide phone1:
-  - hide phone2:
-  - hide setupcgs:
-  - traveller says: "And to finish: audio"
-  - show setupaudio: AT 400,350
-  - traveller says: You can have music, and you can have sfx.
-  - traveller says: The music will usually be looped, while the sfx will play just once.
-  - traveller says: For example, the current background music is ocean.
-  - traveller says: Let's make a phone call and check the ringtone...
-  - show phone1: AT 400,300
-  - play ringtoneSFX:
-  - text: Tururu Ruru Ruru Ruruuuu
-  - traveller says: This has to be traveller's.
-  - show traveller: normal AT RIGHT
-    flipped: true
-  - traveller says: Hey! That's my phone!
-  - hide phone1:
-  - hide traveller: WITH FADE
-  - show traveller: normal
-  - traveller says: I knew it!
-  - show traveller: normal
-  - traveller says: Anyway, that's it, lesson over.
-  - hide setupaudio:
-  - traveller says: I'm going to try and find the place where this bar music is playing.
-  - show traveller: normal
-  - traveller says: You're not entirely bad.
-  - traveller says: See you around.
-  - traveller says: And don't get lost, your next class is over there!
-  - hide traveller: WITH FADE
-  - scene: writingTheStory
+# storySetup:
+#   - show school_morning:
+#   - show traveller:
+#   - traveller says: So you're the new student.
+#   - traveller says: I've heard a lot about you from traveller.
+#   - traveller says: She gets easily excited.
+#   - show traveller: normal
+#   - traveller says: But with me, you'll have to prove yourself first.
+#   - traveller says: Do you have what it takes to be a visual novel writer?
+#   - show traveller: normal
+#   - traveller says: We'll see.
+#   - traveller says: I'm traveller, btw.
+#   - traveller says: But you should know that, since my name is on display right above the text box.
+#   - traveller says: I'm here to show you how to setup your story.
+#   - effect SHOWTITLE: 
+#     title: Chapter 2
+#     subtitle: Setting up the story
+#   - traveller says: All the setup is contained in the Setup.yaml file.
+#   - traveller says: What this means is.
+#   - traveller says: All your characters, music, sfx and everything else you're planning to use on the story.
+#   - traveller says: Needs to be declared on this file.
+#   - traveller says: And of course, you need to know everything before even start to write your story.
+#   - traveller says: What kind of writer doesn't though...
+#   - wait: 300
+#   - show traveller: normal
+#   - traveller says: Just joking!
+#   - traveller says: You won't always know what things you need for a story.
+#   - traveller says: So every time you add something, remember to also add it to the setup file.
+#   - show traveller: normal
+#   - traveller says: Let's see how it's made.
+#   - show traveller: AT RIGHT WITH MOVE
+#   - show setupbg: AT 400,350 WITH FADE
+#   - traveller says: First tag you need is setup.
+#   - traveller says: Inside the setup, indented by two spaces you declare each kind of object.
+#   - traveller says: The first we have is backgrounds.
+#   - traveller says: Each background has a tag, the name that will be used to refer to that background on the story.
+#   - traveller says: And the path to where the background image is located.
+#   - traveller says: If you go to the game's assets folder, you'll find all the images we can use here.
+#   - show traveller: normal
+#   - traveller says: Seems like we have an afternoon background.
+#   - traveller says: Let's use it so I can go home sooner.
+#   - show school_afternoon: WITH FUSION
+#   - hide setupbg: WITH FADE
+#   - traveller says: Well, time to go home.
+#   - traveller says: See you.
+#   - show traveller: normal AT LEFT WITH MOVE
+#   - show traveller: normal AT RIGHT
+#     flipped: true
+#   - traveller says: Not so fast!
+#   - show traveller: normal
+#     flipped: true
+#   - traveller says: Uh oh.
+#   - traveller says: Where do you think you're going? There's a lot more to say about the setup!
+#   - traveller says: Your student is smart enought to get it without my help.
+#   - traveller says: What? Do you agree with that?
+#   - choice:
+#     - Yeah, I checked the file by myself:
+#       - show traveller: normal
+#       - traveller says: Alright, I guess you can continue with more advanced lessons then...
+#       - show traveller: normal
+#       - traveller says: See, told you not to treat 'em like a baby.
+#       - show traveller: normal
+#       - traveller says: Shut up, you! We'll have a talk later.
+#       - hide traveller: WITH FADE
+#       - show traveller: normal
+#       - traveller says: Ok, the next lesson starts soon, maybe you should save and rest before moving on.
+#       - traveller says: It's going to be long, but it'll probably be easy for you.
+#       - show traveller: normal
+#       - traveller says: And the teacher is great! She's my best friend.
+#       - traveller says: Good luck!
+#       - scene: writingTheStory
+#     - We barely saw the first part!:
+#       - traveller says: Come back here you ratbag, and finish the lesson!
+#       - traveller says: Ok boss, don't worry.
+#       - hide traveller: WITH FADE
+#   - show traveller: normal
+#   - traveller says: What a snitch.
+#   - show traveller: normal
+#   - traveller says: Anyway, let's see the next part.
+#   - traveller says: Characters.
+#   - traveller says: The characters are... you know what a character is, come on.
+#   - show setupch: AT 400,300 WITH FADE
+#   - traveller says: Ok so, inside the characters tag, each character is declared after its own tag.
+#   - traveller says: Same as the backgrounds, this tag will be used to refer to this character on the text of your story.
+#   - traveller says: Every time you need to use travellerlene, you will use her tag, traveller.
+#   - traveller says: Characters also have a display name, that's the name that will apear on the name box when we talk.
+#   - traveller says: The display name can have whitespaces, accents and whatever you want.
+#   - traveller says: If you omit it, the tag will be used as the name.
+#   - traveller says: The speech colour is the colour to write the name in the name box.
+#   - traveller says: And then you have a list of looks.
+#   - traveller says: A look is an image representing a state of the character.
+#   - traveller says: You always need a normal look, that will be the default.
+#   - traveller says: And you can have as many additional looks as you want.
+#   - traveller says: traveller here can be happy or angry.
+#   - show traveller: normal
+#   - traveller says: Her range of emotions is infinite though.
+#   - traveller says: Believe me.
+#   - show traveller: normal
+#   - hide setupch:
+#   - traveller says: Next up is cgs.
+#   - show setupcgs: 400,350 WITH FADE
+#   - traveller says: CGs stands for Computer Graphics.
+#   - traveller says: It's an image that you can display and animate.
+#   - show traveller: normal
+#   - traveller says: It should have a better name, I know.
+#   - traveller says: But for now, it's what we have.
+#   - show traveller: normal
+#   - traveller says: Same as always, you have the cgs tag, and then each cgs has a tag and an image file.
+#   - traveller says: We have two phones.
+#   - traveller says: Could one of those be mine?
+#   - show phone1: AT 600,300
+#   - show phone2: AT 380,300
+#   - traveller says: I don't think so!
+#   - hide phone1:
+#   - hide phone2:
+#   - hide setupcgs:
+#   - traveller says: "And to finish: audio"
+#   - show setupaudio: AT 400,350
+#   - traveller says: You can have music, and you can have sfx.
+#   - traveller says: The music will usually be looped, while the sfx will play just once.
+#   - traveller says: For example, the current background music is ocean.
+#   - traveller says: Let's make a phone call and check the ringtone...
+#   - show phone1: AT 400,300
+#   - play ringtoneSFX:
+#   - text: Tururu Ruru Ruru Ruruuuu
+#   - traveller says: This has to be traveller's.
+#   - show traveller: normal AT RIGHT
+#     flipped: true
+#   - traveller says: Hey! That's my phone!
+#   - hide phone1:
+#   - hide traveller: WITH FADE
+#   - show traveller: normal
+#   - traveller says: I knew it!
+#   - show traveller: normal
+#   - traveller says: Anyway, that's it, lesson over.
+#   - hide setupaudio:
+#   - traveller says: I'm going to try and find the place where this bar music is playing.
+#   - show traveller: normal
+#   - traveller says: You're not entirely bad.
+#   - traveller says: See you around.
+#   - traveller says: And don't get lost, your next class is over there!
+#   - hide traveller: WITH FADE
+#   - scene: writingTheStory
 
-writingTheStory:
-  - show school_afternoon:
-  - show liz: normal
-  - liz says: Hi! I'm Liz and I'll be your writing mentor.
-  - liz says: Here we'll see how to actually write the story.
-  - show liz: happy
-  - liz says: Are you ready!?
-  - effect SHOWTITLE: 
-    title: Chapter 3
-    subtitle: Writing Part 1
-  - show liz: normal
-  - liz says: First thing you need to know about a story is, it's divided in scenes.
-  - liz says: Each scene is a list of orders that will be executed from first to last.
-  - liz says: Inside a scene you can show backgrounds, characters, make them talk, show choices, call other scenes, and a lot more.
-  - liz says: The scenes are all contained in the file YourStory.yaml.
-  - liz says: And each one has a tag name. This name can be anything, but you always need a scene called start.
-  - liz says: That will be, of course, the starting scene.
-  - show liz: happy
-  - liz says: Really easy, don't you think?
-  - show liz: normal
-  - liz says: So, let's see what's the content of a scene.
-  - show liz: AT RIGHT WITH MOVE
-  - show scenestart:
-  - liz says: This is the starting scene of this game.
-  - liz says: First thing we do is play music.
-  - liz says: Notice the dash symbol.
-  - liz says: That dash indicates that this is a single action.
-  - liz says: Every action starts with a dash.
-  - liz says: Also, after declaring the basic action, you add a colon.
-  - liz says: After this, you can add additional parameters.
-  - liz says: But sometimes you don't need anything, like in this case.
-  - liz says: Still, the colon is important..
-  - liz says: Next line we have another action, notice the starting dash.
-  - liz says: This one shows the background whose tag is 'school_morning'.
-  - liz says: You were there this morning, remember?
-  - liz says: The background takes some aditional parameters.
-  - liz says: The uppercase text WITH is a special word to indicate a transition.
-  - liz says: And 'FADE' is the name of that transition.
-  - liz says: There are a few transitions included with RenJS, like 'CUT', 'FADE', 'FUSION', 'MOVE', 'FADETOBLACK' and 'FADETOWHITE'.
-  - liz says: You can add your own transitions if you feel adventurous.
-  - show liz: happy
-  - liz says: Or you can ask your programmer friend to code them for you!
-  - show liz: normal
-  - liz says: The transitions aren't just for backgrounds but also for characters and cgs.
-  - liz says: The next line shows a character appearing on the screen.
-  - show liz: happy
-  - liz says: travellerlene, my best friend!
-  - show liz: normal
-  - liz says: The first aditional parameter is her look. She was happy to welcome you!
-  - liz says: Also, notice another special word AT, used to designate the position.
-  - liz says: The position can be 'LEFT', 'CENTER', 'RIGHT', or it can be a coordinate like '200,200'.
-  - liz says: And we use, too, the transition 'FADE'.
-  - liz says: Next line is traveller welcoming you. The extra parameter is the text.
-  - hide scenestart:
-  - liz says: So, with just these sentences you can show backgrounds, characters and make them talk.
-  - liz says: But how do we hide them?
-  - liz says: Easily! Just hide them!
-  - show scenehide:
-  - liz says: In this scene traveller is trying to annoy travellerlene once again.
-  - show liz: angry
-  - liz says: He has her phone!
-  - show liz: normal
-  - liz says: On the second line, the phone, a cgs with 'phone1' tag, is shown.
-  - liz says: As the cgs are smaller than characters, we need a specific coordinate to locate them on the screen.
-  - liz says: We use the special word AT again, but this time, with the coordinates.
-  - liz says: Next we play the phone's ringtone, an SFX tagged as 'ringtoneSFX'.
-  - liz says: To visually show the phone is ringing, we show its onomatopoeia.
-  - liz says: "As no character is speaking, the 'text' action is used instead."
-  - liz says: Then travellerlene comes to rescue her phone!
-  - liz says: Can you notice something different when traveller appears this time?
-  - liz says: That's right, she's flipped.
-  - liz says: Sometimes we need our characters to face the other way.
-  - liz says: One easy way to do it is to flip their look.
-  - liz says: On the show action, you just add a new extra parameter.
-  - liz says: "The line right after 'show' doesn't start with a dash, that means it's still the same action as before."
-  - liz says: "And so we add the parameter, flipped: true."
-  - liz says: Then traveller grabs her phone.
-  - liz says: Hiding it is really easy, as I said before.
-  - liz says: And same thing for characters, we can hide traveller, taking a specific transition.
-  - liz says: Let's hide this lesson now.
-  - hide scenehide:
-  - show liz: AT CENTER WITH MOVE
-  - liz says: So that's it for today. You must be really tired after studying the whole day.
-  - show liz: happy
-  - liz says: See you tomorrow for part 2!
-  - hide liz: WITH FADE
-  - scene: interval
+# writingTheStory:
+#   - show school_afternoon:
+#   - show liz: normal
+#   - liz says: Hi! I'm Liz and I'll be your writing mentor.
+#   - liz says: Here we'll see how to actually write the story.
+#   - show liz: happy
+#   - liz says: Are you ready!?
+#   - effect SHOWTITLE: 
+#     title: Chapter 3
+#     subtitle: Writing Part 1
+#   - show liz: normal
+#   - liz says: First thing you need to know about a story is, it's divided in scenes.
+#   - liz says: Each scene is a list of orders that will be executed from first to last.
+#   - liz says: Inside a scene you can show backgrounds, characters, make them talk, show choices, call other scenes, and a lot more.
+#   - liz says: The scenes are all contained in the file YourStory.yaml.
+#   - liz says: And each one has a tag name. This name can be anything, but you always need a scene called start.
+#   - liz says: That will be, of course, the starting scene.
+#   - show liz: happy
+#   - liz says: Really easy, don't you think?
+#   - show liz: normal
+#   - liz says: So, let's see what's the content of a scene.
+#   - show liz: AT RIGHT WITH MOVE
+#   - show scenestart:
+#   - liz says: This is the starting scene of this game.
+#   - liz says: First thing we do is play music.
+#   - liz says: Notice the dash symbol.
+#   - liz says: That dash indicates that this is a single action.
+#   - liz says: Every action starts with a dash.
+#   - liz says: Also, after declaring the basic action, you add a colon.
+#   - liz says: After this, you can add additional parameters.
+#   - liz says: But sometimes you don't need anything, like in this case.
+#   - liz says: Still, the colon is important..
+#   - liz says: Next line we have another action, notice the starting dash.
+#   - liz says: This one shows the background whose tag is 'school_morning'.
+#   - liz says: You were there this morning, remember?
+#   - liz says: The background takes some aditional parameters.
+#   - liz says: The uppercase text WITH is a special word to indicate a transition.
+#   - liz says: And 'FADE' is the name of that transition.
+#   - liz says: There are a few transitions included with RenJS, like 'CUT', 'FADE', 'FUSION', 'MOVE', 'FADETOBLACK' and 'FADETOWHITE'.
+#   - liz says: You can add your own transitions if you feel adventurous.
+#   - show liz: happy
+#   - liz says: Or you can ask your programmer friend to code them for you!
+#   - show liz: normal
+#   - liz says: The transitions aren't just for backgrounds but also for characters and cgs.
+#   - liz says: The next line shows a character appearing on the screen.
+#   - show liz: happy
+#   - liz says: travellerlene, my best friend!
+#   - show liz: normal
+#   - liz says: The first aditional parameter is her look. She was happy to welcome you!
+#   - liz says: Also, notice another special word AT, used to designate the position.
+#   - liz says: The position can be 'LEFT', 'CENTER', 'RIGHT', or it can be a coordinate like '200,200'.
+#   - liz says: And we use, too, the transition 'FADE'.
+#   - liz says: Next line is traveller welcoming you. The extra parameter is the text.
+#   - hide scenestart:
+#   - liz says: So, with just these sentences you can show backgrounds, characters and make them talk.
+#   - liz says: But how do we hide them?
+#   - liz says: Easily! Just hide them!
+#   - show scenehide:
+#   - liz says: In this scene traveller is trying to annoy travellerlene once again.
+#   - show liz: angry
+#   - liz says: He has her phone!
+#   - show liz: normal
+#   - liz says: On the second line, the phone, a cgs with 'phone1' tag, is shown.
+#   - liz says: As the cgs are smaller than characters, we need a specific coordinate to locate them on the screen.
+#   - liz says: We use the special word AT again, but this time, with the coordinates.
+#   - liz says: Next we play the phone's ringtone, an SFX tagged as 'ringtoneSFX'.
+#   - liz says: To visually show the phone is ringing, we show its onomatopoeia.
+#   - liz says: "As no character is speaking, the 'text' action is used instead."
+#   - liz says: Then travellerlene comes to rescue her phone!
+#   - liz says: Can you notice something different when traveller appears this time?
+#   - liz says: That's right, she's flipped.
+#   - liz says: Sometimes we need our characters to face the other way.
+#   - liz says: One easy way to do it is to flip their look.
+#   - liz says: On the show action, you just add a new extra parameter.
+#   - liz says: "The line right after 'show' doesn't start with a dash, that means it's still the same action as before."
+#   - liz says: "And so we add the parameter, flipped: true."
+#   - liz says: Then traveller grabs her phone.
+#   - liz says: Hiding it is really easy, as I said before.
+#   - liz says: And same thing for characters, we can hide traveller, taking a specific transition.
+#   - liz says: Let's hide this lesson now.
+#   - hide scenehide:
+#   - show liz: AT CENTER WITH MOVE
+#   - liz says: So that's it for today. You must be really tired after studying the whole day.
+#   - show liz: happy
+#   - liz says: See you tomorrow for part 2!
+#   - hide liz: WITH FADE
+#   - scene: interval
 
-interval:
-  - stop ocean: WITH FADE
-  - show room_night:
-  - show room_night_light: WITH FUSION
-  - play cicadas: WITH FADE
-  - show traveller: normal WITH FADE
-  - traveller says: Hey! I knew I was going to find you here.
-  - traveller says: Were you going to sleep already?
-  - traveller says: I know you're new in town, so I thought I could show you around a bit.
-  - traveller says: What do you think?
-  - interrupt 6:
-    - Isn't it a bit awkward???:
-      - show traveller: normal
-      - traveller says: What do you mean?
-      - traveller says: Because I'm your teacher?  
-      - show traveller: normal
-      - traveller says: We're almost the same age!
-      - show traveller: normal
-      - traveller says: You might be teaching some years from now too. 
-      - show traveller: normal
-      - traveller says: Then you'll see how awkward it is to be called professor and be treatead like and old person.
-      - show traveller: normal
-      - traveller says: Anyway, as I was saying...
-  - traveller says: You probably know it already, but this is a small town.
-  - traveller says: There's not much to see, really.
-  - traveller says: But the cool kids all get together outside the store.
-  - traveller says: Have you been there already?
-  - traveller says: You can't miss it.
-  - traveller says: So, ready to go?
-  - show traveller: normal
-  - traveller says: Let's go!
-  - scene: storeAtNight
+# interval:
+#   - stop ocean: WITH FADE
+#   - show room_night:
+#   - show room_night_light: WITH FUSION
+#   - play cicadas: WITH FADE
+#   - show traveller: normal WITH FADE
+#   - traveller says: Hey! I knew I was going to find you here.
+#   - traveller says: Were you going to sleep already?
+#   - traveller says: I know you're new in town, so I thought I could show you around a bit.
+#   - traveller says: What do you think?
+#   - interrupt 6:
+#     - Isn't it a bit awkward???:
+#       - show traveller: normal
+#       - traveller says: What do you mean?
+#       - traveller says: Because I'm your teacher?  
+#       - show traveller: normal
+#       - traveller says: We're almost the same age!
+#       - show traveller: normal
+#       - traveller says: You might be teaching some years from now too. 
+#       - show traveller: normal
+#       - traveller says: Then you'll see how awkward it is to be called professor and be treatead like and old person.
+#       - show traveller: normal
+#       - traveller says: Anyway, as I was saying...
+#   - traveller says: You probably know it already, but this is a small town.
+#   - traveller says: There's not much to see, really.
+#   - traveller says: But the cool kids all get together outside the store.
+#   - traveller says: Have you been there already?
+#   - traveller says: You can't miss it.
+#   - traveller says: So, ready to go?
+#   - show traveller: normal
+#   - traveller says: Let's go!
+#   - scene: storeAtNight
 
-storeAtNight:
-  # - play storeBGM:
-  - show store:
-  - show liz: happyC WITH FADE
-  - liz says: traveller!!! Over here!
-  - show liz: happyC AT 500,600 WITH MOVE
-  - show traveller: normal AT 300,600 WITH FADE
-  - traveller says: Liz! How are you?
-  - show liz: normalC
-  - liz says: Great! I just got here and was wondering where you were.
-  - show traveller: normal
-  - traveller says: I stopped by the dorms to get my new student, and show them around.
-  - show traveller: normal AT LEFT WITH FADE
-    flipped: true
-  - traveller says: You should stop acting like a mama duck to your students.
-  - show traveller: normal
-    flipped: true
-  - traveller says: Are you jealous for not getting all the attention now?
-  - show traveller: normal
-  - traveller says: Yeah, right...
-  - show marco: normalC WITH FADE AT RIGHT
-  - marco says: You two fighting again?
-  - show liz: happyC
-  - liz says: Seems like a normal day.
-  - show traveller: normal
-    flipped: false
-  - traveller says: Hey! You're supposed to be on my side.
-  - traveller says: He started it!
-  - show liz: normalC
-  - show traveller: normal
-  - traveller says: Anyway, good to see you Marco.
-  - show traveller: normal
-  - traveller says: Yes, what's the special occasion that made you crawl out of your hole.
-  - show marco: happyC
-  - marco says: Have to get some food before it starts raining.
-  - show liz: angryC
-  - liz says: What do you mean by rain? It's a beautiful day!
-  - effect THUNDER:
-  - marco says: I better hurry. Bye!
-  - hide marco:
-  - traveller says: Maybe we should go too, before...
-  - ambient RAIN:
-  - traveller says: I knew something weird was going to happend when I saw that guy.
-  - traveller says: How could this happen so suddenly?
-  - show liz: normalC
-  - liz says: Well, it's rather easy.
-  - liz says: Ambients and effects.
-  - traveller says: Come on! Not on the streets!
-  - show liz: angryC
-  - show traveller: normal
-    flipped: true
-  - traveller says: That's it! You and I are going to have a serious talk!
-  - traveller says: If you can catch me!
-  - hide traveller:
-  - show traveller: normal AT LEFT WITH MOVE
-  - hide traveller: WITH FADE
-  - show liz: happyC
-  - liz says: I know how that's going to end.
-  - show liz: normalC
-  - liz says: As I was saying, ambient changes are really easy to make.
-  - liz says: Let me show you.
-  - show ambientAndEffects:
-  - liz says: Ambients are visual and sound effects that persist through time.
-  - liz says: Like rain, snow or cherry blossoms falling.
-  - liz says: "You call them using the action 'ambient', followed by the ambient name."
-  - liz says: There's a few ambients ready to use.
-  - liz says: "'RAIN', 'SNOW' and 'SAKURA'."
-  - liz says: "To stop an ambient you call a special ambient called 'CLEAR'."
-  - ambient CLEAR:
-  - show liz: happyC
-  - liz says: And the rain stops!
-  - liz says: Finally!
-  - show liz: normalC
-  - liz says: Effects are visual and sound effects that get played just once.
-  - liz says: Like that thunder from before.
-  - liz says: "Some other handy effects are:"
-  - liz says: "'SHAKE', a screen shake!"
-  - liz says: "'SHOWTITLE', a title screen like the ones at the start of each chapter."
-  - liz says: You can send two extra parameters, such as title and subtitle to it.
-  - liz says: "'EXPLOSION', just what it says on the tin."
-  - liz says: And the same goes for 'ATTACK', 'MULTIATTACK' and 'CHAINATTACK'.
-  - liz says: One last thing.
-  - liz says: The extra sounds and images used by ambients and effects have to be declared on the 'extra' section of the setup file.
-  - liz says: For example, the RAIN ambient uses a rain sound and a raindrop image and you can use your own.
-  - hide ambientAndEffects:
-  - show liz: happyC
-  - liz says: And that's pretty much it.
-  - show marco: normalC AT LEFT WITH FADE
-  - marco says: Where you under the rain all this time?
-  - show liz: normalC
-  - liz says: It's ok, I like rain.
-  - liz says: Did you get your dinner?
-  - show marco: happyC
-  - marco says: I got some things for cooking. Do you want to come over?
-  - liz says: Really? All right, let's go.
-  - show liz: normalC
-  - liz says: By the way, this is Marco, he'll be teaching you about code and branches tomorrow.
-  - show marco: normalC
-  - marco says: Hi, new kid!
-  - liz says: Do you think you can find your way back to the dorms by yourself?
-  - choice:
-    - Yes, no problem:
-      - liz says: Ok, then I guess I'll see you tomorrow, don't be late!
-    - Sure:
-      - liz says: Ok, then I guess I'll see you tomorrow, don't be late!
-  - scene: backToTheRoom
+# storeAtNight:
+#   # - play storeBGM:
+#   - show store:
+#   - show liz: happyC WITH FADE
+#   - liz says: traveller!!! Over here!
+#   - show liz: happyC AT 500,600 WITH MOVE
+#   - show traveller: normal AT 300,600 WITH FADE
+#   - traveller says: Liz! How are you?
+#   - show liz: normalC
+#   - liz says: Great! I just got here and was wondering where you were.
+#   - show traveller: normal
+#   - traveller says: I stopped by the dorms to get my new student, and show them around.
+#   - show traveller: normal AT LEFT WITH FADE
+#     flipped: true
+#   - traveller says: You should stop acting like a mama duck to your students.
+#   - show traveller: normal
+#     flipped: true
+#   - traveller says: Are you jealous for not getting all the attention now?
+#   - show traveller: normal
+#   - traveller says: Yeah, right...
+#   - show marco: normalC WITH FADE AT RIGHT
+#   - marco says: You two fighting again?
+#   - show liz: happyC
+#   - liz says: Seems like a normal day.
+#   - show traveller: normal
+#     flipped: false
+#   - traveller says: Hey! You're supposed to be on my side.
+#   - traveller says: He started it!
+#   - show liz: normalC
+#   - show traveller: normal
+#   - traveller says: Anyway, good to see you Marco.
+#   - show traveller: normal
+#   - traveller says: Yes, what's the special occasion that made you crawl out of your hole.
+#   - show marco: happyC
+#   - marco says: Have to get some food before it starts raining.
+#   - show liz: angryC
+#   - liz says: What do you mean by rain? It's a beautiful day!
+#   - effect THUNDER:
+#   - marco says: I better hurry. Bye!
+#   - hide marco:
+#   - traveller says: Maybe we should go too, before...
+#   - ambient RAIN:
+#   - traveller says: I knew something weird was going to happend when I saw that guy.
+#   - traveller says: How could this happen so suddenly?
+#   - show liz: normalC
+#   - liz says: Well, it's rather easy.
+#   - liz says: Ambients and effects.
+#   - traveller says: Come on! Not on the streets!
+#   - show liz: angryC
+#   - show traveller: normal
+#     flipped: true
+#   - traveller says: That's it! You and I are going to have a serious talk!
+#   - traveller says: If you can catch me!
+#   - hide traveller:
+#   - show traveller: normal AT LEFT WITH MOVE
+#   - hide traveller: WITH FADE
+#   - show liz: happyC
+#   - liz says: I know how that's going to end.
+#   - show liz: normalC
+#   - liz says: As I was saying, ambient changes are really easy to make.
+#   - liz says: Let me show you.
+#   - show ambientAndEffects:
+#   - liz says: Ambients are visual and sound effects that persist through time.
+#   - liz says: Like rain, snow or cherry blossoms falling.
+#   - liz says: "You call them using the action 'ambient', followed by the ambient name."
+#   - liz says: There's a few ambients ready to use.
+#   - liz says: "'RAIN', 'SNOW' and 'SAKURA'."
+#   - liz says: "To stop an ambient you call a special ambient called 'CLEAR'."
+#   - ambient CLEAR:
+#   - show liz: happyC
+#   - liz says: And the rain stops!
+#   - liz says: Finally!
+#   - show liz: normalC
+#   - liz says: Effects are visual and sound effects that get played just once.
+#   - liz says: Like that thunder from before.
+#   - liz says: "Some other handy effects are:"
+#   - liz says: "'SHAKE', a screen shake!"
+#   - liz says: "'SHOWTITLE', a title screen like the ones at the start of each chapter."
+#   - liz says: You can send two extra parameters, such as title and subtitle to it.
+#   - liz says: "'EXPLOSION', just what it says on the tin."
+#   - liz says: And the same goes for 'ATTACK', 'MULTIATTACK' and 'CHAINATTACK'.
+#   - liz says: One last thing.
+#   - liz says: The extra sounds and images used by ambients and effects have to be declared on the 'extra' section of the setup file.
+#   - liz says: For example, the RAIN ambient uses a rain sound and a raindrop image and you can use your own.
+#   - hide ambientAndEffects:
+#   - show liz: happyC
+#   - liz says: And that's pretty much it.
+#   - show marco: normalC AT LEFT WITH FADE
+#   - marco says: Where you under the rain all this time?
+#   - show liz: normalC
+#   - liz says: It's ok, I like rain.
+#   - liz says: Did you get your dinner?
+#   - show marco: happyC
+#   - marco says: I got some things for cooking. Do you want to come over?
+#   - liz says: Really? All right, let's go.
+#   - show liz: normalC
+#   - liz says: By the way, this is Marco, he'll be teaching you about code and branches tomorrow.
+#   - show marco: normalC
+#   - marco says: Hi, new kid!
+#   - liz says: Do you think you can find your way back to the dorms by yourself?
+#   - choice:
+#     - Yes, no problem:
+#       - liz says: Ok, then I guess I'll see you tomorrow, don't be late!
+#     - Sure:
+#       - liz says: Ok, then I guess I'll see you tomorrow, don't be late!
+#   - scene: backToTheRoom
 
-backToTheRoom:
-  - play cicadas: WITH FADE
-  - show room_night:
-  - show room_night_light: WITH FUSION  
-  - text: Your day was very tiring, but you're closer to be a visual novel writer. Tomorrow is going to be another long day, you better rest.
-  - show room_night: WITH FUSION
-  - wait: 400
-  - scene: day2
+# backToTheRoom:
+#   - play cicadas: WITH FADE
+#   - show room_night:
+#   - show room_night_light: WITH FUSION  
+#   - text: Your day was very tiring, but you're closer to be a visual novel writer. Tomorrow is going to be another long day, you better rest.
+#   - show room_night: WITH FUSION
+#   - wait: 400
+#   - scene: day2
 
-day2:
-  - play ocean:
-  - show school_morning: WITH FADE
-  - show traveller: normal AT CENTER WITH FADE
-  - traveller says: Welcome back!
-  - traveller says: How was your first night away from home?
-  - show traveller: normal
-  - traveller says: Are you ready for today's lessons?
-  - traveller says: I'll let you to it.
-  - hide traveller: WITH FADE
-  - show liz: WITH FADE
-  - liz says: Good morning!
-  - liz says: Let's start right away.
-  - effect SHOWTITLE: 
-    title: Chapter 4
-    subtitle: Writing Part 2
-  - liz says: Today we're going to see a very important part of writting interactive fiction.
-  - show liz: happy
-  - liz says: Interactivity!
-  - show liz: normal
-  - liz says: That is, how to let your players make choices that affect the story.
-  - liz says: The most straightforward way of doing this is presenting a list of choices for the player to make.
-  - liz says: Have you seen something like that in this game?
-  - choice:
-    - Yes, traveller asks a lot of questions:
-      - show liz: happy
-      - liz says: She does!
-    - I don't think so:
-      - show liz: angry
-      - liz says: Was your head in the clouds? There were choices all over this lessons.
-      - liz says: This just now was a list of choices and you clicked on one.
-  - show liz: normal
-  - liz says: "Let's see an example:"
-  - show lessonChoice:
-  - liz says: This part of the story is really recent.
-  - liz says: I asked you something.
-  - liz says: And you could have choosen between two different options.
-  - liz says: That is achieved with the action 'choice'.
-  - liz says: This action then takes a list of choices, indented by two spaces, and starting each with a dash.
-  - liz says: Your choices here were 'Yes, traveller asks a lot of questions' and 'I don't think so'.
-  - liz says: Inside each option, indented too by two spaces from the choice text, there's a new list.
-  - liz says: Those are the actions to execute if that choice is made.
-  - liz says: And when those actions are finished, you return to the next action after the 'choice' tag.
-  - hide lessonChoice:
-  - liz says: Inside a choice you can do anything you do in a scene.
-  - show liz: happy
-  - liz says: Even showing more choices!
-  - liz says: But that could get out of hand really fast. Try not to nest more than two choices at a time.
-  - show liz: normal
-  - liz says: Now, I told you about what a scene is yesterday, and now I'm going to show you how to change from one scene to the next.
-  - show lessonScene:
-  - liz says: This example shows a whole scene that can continue in two possible different scenes.
-  - liz says: To start another scene we use the action 'scene'. It takes an extra parameter, the name of the scene to be executed next.
-  - liz says: That means the order you write the scenes or place them in the file has nothing to do with the actual execution.
-  - liz says: And that also means that you have to explicitly call the next scene when the current one ends.
-  - liz says: We can see here that the game will continue in different paths depending on what choices the player makes.
-  - liz says: When you change the scene, nothing else from that scene is executed.
-  - liz says: So if the player picks the phone up and then chooses to go to the party, the scene will change immediately to the 'partyScene' scene. 
-  - liz says: And if she doesn't attend the call or chooses not to go, the scene will continue until the end and change to the 'dormsScene' scene.
-  - hide lessonScene:
-  - show liz: happy
-  - liz says: Remember you can always say no to invitations, don't fall for peer pressure.
-  - show liz: normal
-  - liz says: There's another way of making a choice.
-  - liz says: Visual choices.
-  - liz says: With visual choices instead of using a text line, each option is an image you have to click.
-  - liz says: Let's see it in action.
-  - visualchoice:
-    - phone1 AT 620,300:
-      - play ringtoneSFX:
-      - text: Tururu Ruru Ruru Ruruuuu
-      - liz says: You chose the pink phone.
-    - phone2 AT 180,300:
-      - play ringtoneSFX2:
-      - text: Pi Pi Ri Pi Ripi Pi Ri
-      - liz says: You chose the light blue phone.
-  - show liz: happy
-  - liz says: Really interesting, right?
-  - show liz: normal AT LEFT WITH MOVE
-    flipped: true
-  - liz says: Then let's see how to do it.
-  - show lessonVisualChoice:
-  - liz says: It's similar to the normal choices, but the text has the information to show the images.
-  - liz says: First the tag of the image, and then the position.
-  - liz says: The image has to be declared in the setup file, in the extra section.
-  - liz says: And that's it!
-  - hide lessonVisualChoice:
-  - show liz: happy
-  - liz says: There's a few more things about choices, but we'll see them after your next lesson.
-  - show marco: normal AT CENTER WITH FADE
-  - liz says: And here is your professor for it!
-  - show marco: happy
-  - marco says: Hey Liz, what are you doing here? I have a lesson now.
-  - show marco: normal
-  - marco says: Am I too early?
-  - show liz: normal
-  - liz says: Oh no, it's...
-  - marco says: Too late?
-  - show marco: worry
-  - marco says: Is it the wrong day?
-  - marco says: Again?
-  - show liz: happy
-  - liz says: It's ok, it't the right day and time... And place.
-  - show marco: happy
-  - marco says: Great!
-  - show marco: normal
-  - marco says: Ok, so you have to open the file...
-  - liz says: Wait, wait, wait!
-  - show liz: normal
-  - liz says: You have to introduce yourself first! Come on, traveller told you about these things.
-  - liz says: And don't forget to say what the lesson is about either!
-  - show marco: worry
-  - marco says: Sorry!
-  - wait: 600
-  - show marco: happy
-  - marco says: There! I won't forget again. I'm making a protocol for coming to class, see?
-  - liz says: Really? A protocol?
-  - liz says: Didn't think it could be so complicated... What's on it?
-  - show marco: normal
-  - marco says: Well, first, getting out of bed and washing my face.
-  - marco says: Then, coming the right day at the right time is really important.
-  - show marco: happy
-  - marco says: And now I've added saying my name and state my lesson summary for the students.
-  - liz says: That's very thorough.
-  - show liz: happy
-  - liz says: Ok, I don't want to disrupt your protocol too much, so I'll let you keep going.
-  - show liz: normal
-  - liz says: Good luck!
-  - show liz: happy
-  - liz says: All of you!!!
-  - hide liz: WITH FADE
-  - scene: lessonStoryFlux
+# day2:
+#   - play ocean:
+#   - show school_morning: WITH FADE
+#   - show traveller: normal AT CENTER WITH FADE
+#   - traveller says: Welcome back!
+#   - traveller says: How was your first night away from home?
+#   - show traveller: normal
+#   - traveller says: Are you ready for today's lessons?
+#   - traveller says: I'll let you to it.
+#   - hide traveller: WITH FADE
+#   - show liz: WITH FADE
+#   - liz says: Good morning!
+#   - liz says: Let's start right away.
+#   - effect SHOWTITLE: 
+#     title: Chapter 4
+#     subtitle: Writing Part 2
+#   - liz says: Today we're going to see a very important part of writting interactive fiction.
+#   - show liz: happy
+#   - liz says: Interactivity!
+#   - show liz: normal
+#   - liz says: That is, how to let your players make choices that affect the story.
+#   - liz says: The most straightforward way of doing this is presenting a list of choices for the player to make.
+#   - liz says: Have you seen something like that in this game?
+#   - choice:
+#     - Yes, traveller asks a lot of questions:
+#       - show liz: happy
+#       - liz says: She does!
+#     - I don't think so:
+#       - show liz: angry
+#       - liz says: Was your head in the clouds? There were choices all over this lessons.
+#       - liz says: This just now was a list of choices and you clicked on one.
+#   - show liz: normal
+#   - liz says: "Let's see an example:"
+#   - show lessonChoice:
+#   - liz says: This part of the story is really recent.
+#   - liz says: I asked you something.
+#   - liz says: And you could have choosen between two different options.
+#   - liz says: That is achieved with the action 'choice'.
+#   - liz says: This action then takes a list of choices, indented by two spaces, and starting each with a dash.
+#   - liz says: Your choices here were 'Yes, traveller asks a lot of questions' and 'I don't think so'.
+#   - liz says: Inside each option, indented too by two spaces from the choice text, there's a new list.
+#   - liz says: Those are the actions to execute if that choice is made.
+#   - liz says: And when those actions are finished, you return to the next action after the 'choice' tag.
+#   - hide lessonChoice:
+#   - liz says: Inside a choice you can do anything you do in a scene.
+#   - show liz: happy
+#   - liz says: Even showing more choices!
+#   - liz says: But that could get out of hand really fast. Try not to nest more than two choices at a time.
+#   - show liz: normal
+#   - liz says: Now, I told you about what a scene is yesterday, and now I'm going to show you how to change from one scene to the next.
+#   - show lessonScene:
+#   - liz says: This example shows a whole scene that can continue in two possible different scenes.
+#   - liz says: To start another scene we use the action 'scene'. It takes an extra parameter, the name of the scene to be executed next.
+#   - liz says: That means the order you write the scenes or place them in the file has nothing to do with the actual execution.
+#   - liz says: And that also means that you have to explicitly call the next scene when the current one ends.
+#   - liz says: We can see here that the game will continue in different paths depending on what choices the player makes.
+#   - liz says: When you change the scene, nothing else from that scene is executed.
+#   - liz says: So if the player picks the phone up and then chooses to go to the party, the scene will change immediately to the 'partyScene' scene. 
+#   - liz says: And if she doesn't attend the call or chooses not to go, the scene will continue until the end and change to the 'dormsScene' scene.
+#   - hide lessonScene:
+#   - show liz: happy
+#   - liz says: Remember you can always say no to invitations, don't fall for peer pressure.
+#   - show liz: normal
+#   - liz says: There's another way of making a choice.
+#   - liz says: Visual choices.
+#   - liz says: With visual choices instead of using a text line, each option is an image you have to click.
+#   - liz says: Let's see it in action.
+#   - visualchoice:
+#     - phone1 AT 620,300:
+#       - play ringtoneSFX:
+#       - text: Tururu Ruru Ruru Ruruuuu
+#       - liz says: You chose the pink phone.
+#     - phone2 AT 180,300:
+#       - play ringtoneSFX2:
+#       - text: Pi Pi Ri Pi Ripi Pi Ri
+#       - liz says: You chose the light blue phone.
+#   - show liz: happy
+#   - liz says: Really interesting, right?
+#   - show liz: normal AT LEFT WITH MOVE
+#     flipped: true
+#   - liz says: Then let's see how to do it.
+#   - show lessonVisualChoice:
+#   - liz says: It's similar to the normal choices, but the text has the information to show the images.
+#   - liz says: First the tag of the image, and then the position.
+#   - liz says: The image has to be declared in the setup file, in the extra section.
+#   - liz says: And that's it!
+#   - hide lessonVisualChoice:
+#   - show liz: happy
+#   - liz says: There's a few more things about choices, but we'll see them after your next lesson.
+#   - show marco: normal AT CENTER WITH FADE
+#   - liz says: And here is your professor for it!
+#   - show marco: happy
+#   - marco says: Hey Liz, what are you doing here? I have a lesson now.
+#   - show marco: normal
+#   - marco says: Am I too early?
+#   - show liz: normal
+#   - liz says: Oh no, it's...
+#   - marco says: Too late?
+#   - show marco: worry
+#   - marco says: Is it the wrong day?
+#   - marco says: Again?
+#   - show liz: happy
+#   - liz says: It's ok, it't the right day and time... And place.
+#   - show marco: happy
+#   - marco says: Great!
+#   - show marco: normal
+#   - marco says: Ok, so you have to open the file...
+#   - liz says: Wait, wait, wait!
+#   - show liz: normal
+#   - liz says: You have to introduce yourself first! Come on, traveller told you about these things.
+#   - liz says: And don't forget to say what the lesson is about either!
+#   - show marco: worry
+#   - marco says: Sorry!
+#   - wait: 600
+#   - show marco: happy
+#   - marco says: There! I won't forget again. I'm making a protocol for coming to class, see?
+#   - liz says: Really? A protocol?
+#   - liz says: Didn't think it could be so complicated... What's on it?
+#   - show marco: normal
+#   - marco says: Well, first, getting out of bed and washing my face.
+#   - marco says: Then, coming the right day at the right time is really important.
+#   - show marco: happy
+#   - marco says: And now I've added saying my name and state my lesson summary for the students.
+#   - liz says: That's very thorough.
+#   - show liz: happy
+#   - liz says: Ok, I don't want to disrupt your protocol too much, so I'll let you keep going.
+#   - show liz: normal
+#   - liz says: Good luck!
+#   - show liz: happy
+#   - liz says: All of you!!!
+#   - hide liz: WITH FADE
+#   - scene: lessonStoryFlux
 
-lessonStoryFlux:
-  - show marco: normal
-  - marco says: All right, so, as I've gotten out of bed, washed my face and came here on the right day at the right time.
-  - marco says: Now I can tell you.
-  - show marco: happy
-  - marco says: Hi! My name is Marco, and I'll be teaching you about logic and variables.
-  - effect SHOWTITLE: 
-    title: Chapter 5
-    subtitle: Story Flux
-  - show marco: normal
-  - marco says: This is chapter 5 of the course, that means you already know about choices and interrupts.
-  - marco says: That's one way of changing the course of your story.
-  - marco says: But some of our actions take a long time before they reflect on the outcome of our story.
-  - marco says: That means that sometimes during the story you will need to keep record of the player's decisions.
-  - marco says: What and how, exactly, is up to you.
-  - marco says: RenJS allows you to save information with the action 'var'.
-  - marco says: It's name comes from the word variable, since it's value could change.
-  - marco says: Let's see an example of what you can do with this action.
-  - show marco: AT RIGHT WITH MOVE
-  - show lessonVarsNumeric:
-  - marco says: Let's start with the easiest of the variable types, numbers. 
-  - marco says: This kind of action is often called an assignation.
-  - marco says: It assigns a value to a variable.
-  - marco says: "We can say an assignation has two parts: left and right."
-  - marco says: In our case, the parts are separated by a colon.
-  - marco says: The left part contains the variable name.
-  - marco says: And the right part contains the value that will be assigned.
-  - marco says: This value can be the raw data, a number like 0.
-  - marco says: Or we make an operation combining numbers and other variables in an operation.
-  - marco says: To use the value of a variable in the right part, we have to surround its name with curly braces.
-  - marco says: That way we are saying we need to go and find the value of those variables, replace them in the operation.
-  - marco says: And then resolve the operation.
-  - marco says: The first variable 'score' is assigned the number 0 directly.
-  - marco says: Same with the variable 'extraPoints'.
-  - marco says: The third line assigns again a value to the variable 'score'.
-  - marco says: The old value is lost, and the new one will replace it.
-  - marco says: The new value is a summatory between the old value and 10.
-  - marco says: "First it evaluates the value of 'score' and then it resolves: 0 + 10 = 10"
-  - marco says: In this way, we can make almost any arithmetical operation we want.
-  - marco says: "The marks allowed in this operations are:"
-  - marco says: " '+' is used for addition."
-  - marco says: " '-' is for subtraction."
-  - marco says: " '*' is for multiplication."
-  - marco says: " '/' is for division."
-  - marco says: And you can also use parentheses to make more complicated operations, like assigning something to 'totalScore'.
-  - marco says: One last thing to pay attention to is...
-  - marco says: Most of the values on the right side are bewtween inverted commas.
-  - marco says: That's because the parser, the program that reads each line and decides what it means...
-  - marco says: "gets nervous when special characters like + & / etc appear on a line."
-  - marco says: So you have to use the inverted commas to let it know it's all one valid line.
-  - hide lessonVarsNumeric:
-  - marco says: Next type of variables are boolean.
-  - marco says: A boolean variable can take only one of two values, either true or false.
-  - marco says: These variables are useful to store flags of events.
-  - show lessonVarsBoolean:
-  - marco says: As with numeric variables, we can also assign an operations to the variables.
-  - marco says: The operations in this case are logical, and they have their own symbols to use.
-  - marco says: "The usual ones are:"
-  - marco says: "'!', wich means 'not'. On the second line we assign the variable 'lightOff' with 'not lightOn'."
-  - marco says: " '&&' means 'and'. The variable 'allLightsOn' will be true only if both variables 'lightOn and lampOn' are true."
-  - marco says: " '||' means 'or'. The variable 'canRead' will be true if any of the variables 'lightOn or lampOn' are true."
-  - marco says: With just these symbols, including parentheses too, you can create really complex operations.
-  - hide lessonVarsBoolean:
-  - show marco: happy
-  - marco says: But there's yet another way to get a boolean value. One that mixes numbers with arithmetic!
-  - marco says: Isn't it great!?
-  - show marco: normal
-  - show lessonVarsBooleanCont:
-  - marco says: Here we have some new symbols.
-  - marco says: "'>' greater than and '>=' greater or equal than."
-  - marco says: "'==' equal to."
-  - marco says: "'<' less than and '<=' less than or equal to."
-  - marco says: We use those symbols to compare numbers and or variables that contain numbers.
-  - marco says: So we can resolve that a 'highScore' means the 'score is greater than 10'.
-  - marco says: A 'perfectScore' is when 'score is equal to maxScore'. 
-  - marco says: And a 'lowScore' is when 'score is less than or equal to maxScore divided by two'.
-  - hide lessonVarsBooleanCont:
-  - marco says: The boolean operations are really important for the story, as you can use them to branch it. 
-  - marco says: There's a last type of variable. This one is really easy.
-  - show lessonVarsString:
-  - marco says: This is a character string, or more directly, a string.
-  - marco says: These variables store text.
-  - marco says: You can store text directly, or combine them with more text.
-  - marco says: The 'wholeName' variable will resolve to 'Mr. Marco Da Silva'.
-  - show marco: happy
-  - marco says: That's me!
-  - show marco: normal
-  - marco says: You can also show the content of any variable, not just strings, in any dialogue and text.
-  - hide lessonVarsString:
-  - show marco: happy
-  - marco says: And those are all the types of variables you need.
-  - marco says: Now we're going to see how we can use them to change the course of the story.
-  - show marco: normal
-  - marco says: For this we're going to use a new action, 'if'.
-  - marco says: This action allows you to execute orders only if a condition is met.
-  - show lessonIf:
-  - marco says: As you can see, after the 'if', the condition is bewtween parentheses.
-  - marco says: A condition is nothing more than a boolean value. Anything that evaluates to true or false.
-  - marco says: So if you have a boolean variable like 'lightOn', we can use it as a condition.
-  - marco says: If that condition is true, the actions indented inside the if are executed.
-  - marco says: After an 'if' action, we can have an 'else' action.
-  - marco says: This action is only to indicate what actions should be executed if the condition is false.
-  - marco says: The else can be omitted, but if you need it, it should be immediately after the actions of the 'if'.
-  - hide lessonIf:
-  - show marco: happy
-  - marco says: Let's see something a bit more complex.
-  - show marco: normal
-  - show lessonIfCont:
-  - marco says: On this example we can see the condition as a logical operation. 
-  - marco says: If that condition is met, we encounter a second 'if'.
-  - marco says: This is another operation, but the variables being compared are strings, not numbers.
-  - marco says: With strings, we use the '==' operator to check if they're equal.
-  - marco says: You can use the other operators too, but they're not so useful.
-  - marco says: Finally, we find an else, and here, we have to pay extra attention to the indentation.
-  - marco says: The else is just next to the second 'if', but it's on the same level of the first one.
-  - marco says: To which one do you think it belongs?
-  - choice:
-    - First 'if'!:
-      - show marco: happy
-      - marco says: Correct!
-    - Second 'if?:
-      - show marco: worry
-      - marco says: Not really.
-  - show marco: normal  
-  - marco says: The indentation level is what marks the right 'if' to pair it with. So that 'else' belongs to the first 'if'.
-  - hide lessonIfCont:
-  - show marco: normal AT CENTER WITH MOVE
-  - marco says: So that was all you need to know about logic and internal decisions in a story.
-  - marco says: The pieces are simple enough, but combine them and you can make really intricate systems.
-  - show marco: happy
-  - marco says: I love systems!
-  - marco says: They're so perfect!
-  - show marco: normal
-  - marco says: I really don't know if you have another class right now.
-  - marco says: But mine is over, so I'll leave.
-  - show marco: happy
-  - marco says: Bye!
-  - hide marco: WITH FADE
-  - scene: lastClass
+# lessonStoryFlux:
+#   - show marco: normal
+#   - marco says: All right, so, as I've gotten out of bed, washed my face and came here on the right day at the right time.
+#   - marco says: Now I can tell you.
+#   - show marco: happy
+#   - marco says: Hi! My name is Marco, and I'll be teaching you about logic and variables.
+#   - effect SHOWTITLE: 
+#     title: Chapter 5
+#     subtitle: Story Flux
+#   - show marco: normal
+#   - marco says: This is chapter 5 of the course, that means you already know about choices and interrupts.
+#   - marco says: That's one way of changing the course of your story.
+#   - marco says: But some of our actions take a long time before they reflect on the outcome of our story.
+#   - marco says: That means that sometimes during the story you will need to keep record of the player's decisions.
+#   - marco says: What and how, exactly, is up to you.
+#   - marco says: RenJS allows you to save information with the action 'var'.
+#   - marco says: It's name comes from the word variable, since it's value could change.
+#   - marco says: Let's see an example of what you can do with this action.
+#   - show marco: AT RIGHT WITH MOVE
+#   - show lessonVarsNumeric:
+#   - marco says: Let's start with the easiest of the variable types, numbers. 
+#   - marco says: This kind of action is often called an assignation.
+#   - marco says: It assigns a value to a variable.
+#   - marco says: "We can say an assignation has two parts: left and right."
+#   - marco says: In our case, the parts are separated by a colon.
+#   - marco says: The left part contains the variable name.
+#   - marco says: And the right part contains the value that will be assigned.
+#   - marco says: This value can be the raw data, a number like 0.
+#   - marco says: Or we make an operation combining numbers and other variables in an operation.
+#   - marco says: To use the value of a variable in the right part, we have to surround its name with curly braces.
+#   - marco says: That way we are saying we need to go and find the value of those variables, replace them in the operation.
+#   - marco says: And then resolve the operation.
+#   - marco says: The first variable 'score' is assigned the number 0 directly.
+#   - marco says: Same with the variable 'extraPoints'.
+#   - marco says: The third line assigns again a value to the variable 'score'.
+#   - marco says: The old value is lost, and the new one will replace it.
+#   - marco says: The new value is a summatory between the old value and 10.
+#   - marco says: "First it evaluates the value of 'score' and then it resolves: 0 + 10 = 10"
+#   - marco says: In this way, we can make almost any arithmetical operation we want.
+#   - marco says: "The marks allowed in this operations are:"
+#   - marco says: " '+' is used for addition."
+#   - marco says: " '-' is for subtraction."
+#   - marco says: " '*' is for multiplication."
+#   - marco says: " '/' is for division."
+#   - marco says: And you can also use parentheses to make more complicated operations, like assigning something to 'totalScore'.
+#   - marco says: One last thing to pay attention to is...
+#   - marco says: Most of the values on the right side are bewtween inverted commas.
+#   - marco says: That's because the parser, the program that reads each line and decides what it means...
+#   - marco says: "gets nervous when special characters like + & / etc appear on a line."
+#   - marco says: So you have to use the inverted commas to let it know it's all one valid line.
+#   - hide lessonVarsNumeric:
+#   - marco says: Next type of variables are boolean.
+#   - marco says: A boolean variable can take only one of two values, either true or false.
+#   - marco says: These variables are useful to store flags of events.
+#   - show lessonVarsBoolean:
+#   - marco says: As with numeric variables, we can also assign an operations to the variables.
+#   - marco says: The operations in this case are logical, and they have their own symbols to use.
+#   - marco says: "The usual ones are:"
+#   - marco says: "'!', wich means 'not'. On the second line we assign the variable 'lightOff' with 'not lightOn'."
+#   - marco says: " '&&' means 'and'. The variable 'allLightsOn' will be true only if both variables 'lightOn and lampOn' are true."
+#   - marco says: " '||' means 'or'. The variable 'canRead' will be true if any of the variables 'lightOn or lampOn' are true."
+#   - marco says: With just these symbols, including parentheses too, you can create really complex operations.
+#   - hide lessonVarsBoolean:
+#   - show marco: happy
+#   - marco says: But there's yet another way to get a boolean value. One that mixes numbers with arithmetic!
+#   - marco says: Isn't it great!?
+#   - show marco: normal
+#   - show lessonVarsBooleanCont:
+#   - marco says: Here we have some new symbols.
+#   - marco says: "'>' greater than and '>=' greater or equal than."
+#   - marco says: "'==' equal to."
+#   - marco says: "'<' less than and '<=' less than or equal to."
+#   - marco says: We use those symbols to compare numbers and or variables that contain numbers.
+#   - marco says: So we can resolve that a 'highScore' means the 'score is greater than 10'.
+#   - marco says: A 'perfectScore' is when 'score is equal to maxScore'. 
+#   - marco says: And a 'lowScore' is when 'score is less than or equal to maxScore divided by two'.
+#   - hide lessonVarsBooleanCont:
+#   - marco says: The boolean operations are really important for the story, as you can use them to branch it. 
+#   - marco says: There's a last type of variable. This one is really easy.
+#   - show lessonVarsString:
+#   - marco says: This is a character string, or more directly, a string.
+#   - marco says: These variables store text.
+#   - marco says: You can store text directly, or combine them with more text.
+#   - marco says: The 'wholeName' variable will resolve to 'Mr. Marco Da Silva'.
+#   - show marco: happy
+#   - marco says: That's me!
+#   - show marco: normal
+#   - marco says: You can also show the content of any variable, not just strings, in any dialogue and text.
+#   - hide lessonVarsString:
+#   - show marco: happy
+#   - marco says: And those are all the types of variables you need.
+#   - marco says: Now we're going to see how we can use them to change the course of the story.
+#   - show marco: normal
+#   - marco says: For this we're going to use a new action, 'if'.
+#   - marco says: This action allows you to execute orders only if a condition is met.
+#   - show lessonIf:
+#   - marco says: As you can see, after the 'if', the condition is bewtween parentheses.
+#   - marco says: A condition is nothing more than a boolean value. Anything that evaluates to true or false.
+#   - marco says: So if you have a boolean variable like 'lightOn', we can use it as a condition.
+#   - marco says: If that condition is true, the actions indented inside the if are executed.
+#   - marco says: After an 'if' action, we can have an 'else' action.
+#   - marco says: This action is only to indicate what actions should be executed if the condition is false.
+#   - marco says: The else can be omitted, but if you need it, it should be immediately after the actions of the 'if'.
+#   - hide lessonIf:
+#   - show marco: happy
+#   - marco says: Let's see something a bit more complex.
+#   - show marco: normal
+#   - show lessonIfCont:
+#   - marco says: On this example we can see the condition as a logical operation. 
+#   - marco says: If that condition is met, we encounter a second 'if'.
+#   - marco says: This is another operation, but the variables being compared are strings, not numbers.
+#   - marco says: With strings, we use the '==' operator to check if they're equal.
+#   - marco says: You can use the other operators too, but they're not so useful.
+#   - marco says: Finally, we find an else, and here, we have to pay extra attention to the indentation.
+#   - marco says: The else is just next to the second 'if', but it's on the same level of the first one.
+#   - marco says: To which one do you think it belongs?
+#   - choice:
+#     - First 'if'!:
+#       - show marco: happy
+#       - marco says: Correct!
+#     - Second 'if?:
+#       - show marco: worry
+#       - marco says: Not really.
+#   - show marco: normal  
+#   - marco says: The indentation level is what marks the right 'if' to pair it with. So that 'else' belongs to the first 'if'.
+#   - hide lessonIfCont:
+#   - show marco: normal AT CENTER WITH MOVE
+#   - marco says: So that was all you need to know about logic and internal decisions in a story.
+#   - marco says: The pieces are simple enough, but combine them and you can make really intricate systems.
+#   - show marco: happy
+#   - marco says: I love systems!
+#   - marco says: They're so perfect!
+#   - show marco: normal
+#   - marco says: I really don't know if you have another class right now.
+#   - marco says: But mine is over, so I'll leave.
+#   - show marco: happy
+#   - marco says: Bye!
+#   - hide marco: WITH FADE
+#   - scene: lastClass
 
-lastClass:
-  - show school_afternoon: WITH FUSION
-  - show traveller: normal WITH FADE
-    flipped: true
-  - traveller says: Hi! Did you have fun today?
-  - show traveller: normal
-  - traveller says: Marco's is one of the hardest, but once you learn it, it becomes a lot easier to write the stories just how you want them.
-  - traveller says: One last lesson and you can start writing!
-  - show traveller: normal
-  - traveller says: For this lesson, I'll be your teacher.
-  - traveller says: It'll be a lot of fun!
-  - show traveller: normal
-  - effect SHOWTITLE: 
-    title: Chapter 6
-    subtitle: Graphical User Interface
-  - traveller says: So, a Graphical User Interface, or GUI, constitutes most of the look and feel of your story.
-  - traveller says: The graphical elements of your story are the backgrounds, the characters and the cgs.
-  - traveller says: We could say that anything else is part of the GUI.
-  - traveller says: So, the menus, the text box where we show dialogue, the font of the texts, the buttons of the quick menu here in the corner.
-  - traveller says: All of that is part of the GUI.
-  - traveller says: The GUI is not exactly part of the story, but it's great to set the mood, to show the story's aesthetic.
-  - traveller says: So a period drama and a cyberpunk story shouldn't look the same.
-  - traveller says: Also, the GUI will depend on the image resolution used.
-  - traveller says: A little pixel art game will need a specific GUI, and so would a big HD one.
-  - traveller says: With RenJS we have an easy way to make the GUI look exactly the way we need.
-  - traveller says: Configuring of the GUI happens inside the file 'GUI.yaml'.
-  - show traveller: normal AT RIGHT WITH MOVE
-  - traveller says: Let's check it!
-  - show lessonGUI:
-  - traveller says: The first tag we use is simpleGUI.
-  - traveller says: Inside it, the first tag is assets.
-  - traveller says: Just as we did with the story setup, here we need to declare each resource with a file and tag.
-  - traveller says: First of all, we have a fonts list.
-  - traveller says: For this GUI we only use one font, called auditmat-mono.
-  - traveller says: Fonts are declared in a special way.
-  - traveller says: To find them, we first have to load them in a web style.
-  - traveller says: Let's check for a moment the index.html file.
-  - show lessonGUIFonts:
-  - traveller says: Here we tell the web page we need a 'font-face'.
-  - traveller says: The 'font-family' property is the name we'll be referencing in our GUI file.
-  - traveller says: And the 'src' indicates where to find the font file.
-  - traveller says: "We have our font file inside the 'assets/gui' folder."
-  - traveller says: You can go check!
-  - hide lessonGUIFonts:
-  - traveller says: So, for every font you need to use on your game, you have to declare a 'font-face'.
-  - traveller says: And then list them on your GUI file.
-  - show traveller: normal
-  - traveller says: You can find free fonts to use on sites like Google Fonts!
-  - show traveller: normal
-  - hide lessonGUI:
-  - traveller says: Next thing is images.
-  - show lessonGUIImages:
-  - traveller says: Here we list the images we will use with their file names.
-  - traveller says: Pay attention to the tag names, they are important.
-  - traveller says: "'mainBackground' will be the background of the main menu."
-  - traveller says: "'settingsBackground' will be the background of the settings menu."
-  - traveller says: "'sliderFull' will be the image used to show the a slider all full, in the settings menu."
-  - traveller says: You can check how those look if you open the settings menu right now and change some of the values.
-  - traveller says: "'messageBox' is the box where dialogue and text will appear. It's where this text is showing right now."
-  - traveller says: And 'nameBox' is the little box where the character's name is displayed. Right now it says travellerlene.
-  - traveller says: "'ctc' means click to continue, and it's the little image that blinks when the story is waiting for you to click."
-  - traveller says: Your gui could have no nameBox and no ctc, but you definitely need the rest.
-  - hide lessonGUIImages:
-  - show lessonGUISpritesheets:
-  - traveller says: Next you load the spritesheets.
-  - traveller says: A spritesheet is an image that contains different frames of the same image.
-  - traveller says: That's why after the file, you need to add the width and height of the frame.
-  - traveller says: This is particularly useful to load animations and buttons.
-  - traveller says: So let's see what spritesheets we have.
-  - traveller says: And what images we have.
-  - traveller says: A bunch of buttons! Start, load, save, settings and return button from the main and settings menu.
-  - traveller says: Then the quick menu buttons. The quick menu refers to this little menu we have in the corner.
-  - traveller says: It let's you autoplay, skip play, save and open the settings menu. So we need a button for each of those.
-  - traveller says: Then we have the choice box.
-  - traveller says: And the interrupt box.
-  - traveller says: If you open the interrupt box image, you'll notice it has 4 frames.
-  - traveller says: The first two are for the normal interrupt. 
-  - traveller says: And the last two are for and interrupt that's just about to disappear.
-  - traveller says: It should look more urgent.
-  - hide lessonGUISpritesheets:
-  - traveller says: The last kind of asset to declare is audio.
-  - show lessonGUIAudio:
-  - traveller says: The only thing we load here is the main menu music.
-  - hide lessonGUIAudio:
-  - traveller says: After loading all of the assets, we need to configure how each part of the gui looks.
-  - traveller says: Where the buttons are located, where the text should go, etc.
-  - traveller says: We start with the HUD, the head-up display.
-  - traveller says: That's all the GUI parts we'll use during the story.
-  - show lessonGUIHUD:
-  - traveller says: First thing inside 'hud' is the area.
-  - traveller says: The area of the hud is where your quick menu buttons are.
-  - traveller says: It's a rectangle that envelops them, it doesn't have to be perfect.
-  - traveller says: You could have many rectangles if the buttons are no all together.
-  - traveller says: This area is important because it will tell the game that a 'click' inside them doesn't count as a 'story click'.
-  - traveller says: A story click being a click to make the story advance, for example, when the game is waiting for you to read a text.
-  - traveller says: We can not define the area, but then, whenever the player clicks on a button, the story will advance too.
-  - traveller says: That could bring unexpected problems.
-  - traveller says: So it's better to just check where your hud buttons are and make a rectangle around them to define as hud area.
-  - traveller says: After the area we have the 'message' tag.
-  - traveller says: That's the box where all the story text will be displayed.
-  - traveller says: By convention, it will use the 'messageBox' asset.
-  - traveller says: But we need to tell it where to locate it.
-  - traveller says: And then, inside it, where the text will be located, and how it will look.
-  - hide lessonGUIHUD:
-  - show lessonGUIHUDcont:
-  - traveller says: Then we have the name box. Same as before, you add position and text style.
-  - traveller says: One important thing to notice here is the position must be relative the message box.
-  - traveller says: The ctc doesn't have any text, but it can be animated or not.
-  - traveller says: If it's not animated, then it will be made to blink programatically.
-  - traveller says: But it can be if instead of it being a static image, you load it as a spritesheet.
-  - traveller says: In that case, you should set the 'animated' parameter to true.
-  - traveller says: The ctc's position is also relative to the message box.
-  - hide lessonGUIHUDcont:
-  - show lessonGUIHUDcont2:
-  - traveller says: Next elements on the 'hud' are the choice and interrupt boxes.
-  - traveller says: You can give them a position, like the rest of the elements.
-  - traveller says: But if you don't, these boxes will be located in the middle of the screen.
-  - traveller says: You can see how that looks on the choices of this story.
-  - traveller says: If you set a position, then the list of choices will be added from that point down.
-  - traveller says: The 'separation' in the choice means how far one box will be from the other.
-  - traveller says: This number should be bigger than the box height itself, or else one box will be on top of the other.
-  - traveller says: Last thing is text style.
-  - traveller says: You can choose a different font for the interrupt.
-  - hide lessonGUIHUDcont2:
-  - traveller says: If you want to know more about text styles, you can find information about them in the Phaser documentation.
-  - traveller says: Now, the last elements on the 'hud' are the buttons for the quick menu.
-  - show lessonGUIHUDcont3:
-  - traveller says: The tag name for each button is very important, since it's what will determine their action when you press them.
-  - traveller says: The available buttons we have are 'auto', 'skip', 'save' and 'settings'.
-  - traveller says: You don't need all of them in your GUI, of course. You can have only the buttons you deem necessary.
-  - hide lessonGUIHUDcont3:
-  - traveller says: And that's all you need to create your 'hud'.
-  - traveller says: But the GUI also has menus.
-  - traveller says: A menu is basically a background with buttons on it. It can have music, and it can have other elements like sliders.
-  - traveller says: Let's see how to do it.
-  - show lessonGUIMenu:
-  - traveller says: The first menu we have is 'main'. That's the main menu. As a convention, it will use the background 'mainMenu'.
-  - traveller says: It has music, so we have to indicate what music tag it is we should reproduce.
-  - traveller says: And then it has buttons.
-  - traveller says: The buttons are configured in the same way as before.
-  - traveller says: A meaningful tag, a position and a sprite.
-  - hide lessonGUIMenu:
-  - show lessonGUISliders:
-  - traveller says: The settings menu is very similar to the main menu, but it has sliders.
-  - traveller says: The sliders, just like the buttons, have a meaningful name.
-  - traveller says: The name indicates what property will be modified by that slider.
-  - traveller says: Then a position, and the sprite of the slider when it's full.
-  - hide lessonGUISliders:
-  - traveller says: Wow, that was longer than expected.
-  - traveller says: But that completes the whole of this course.
-  - traveller says: Now we need to hurry!
-  - scene: graduation
+# lastClass:
+#   - show school_afternoon: WITH FUSION
+#   - show traveller: normal WITH FADE
+#     flipped: true
+#   - traveller says: Hi! Did you have fun today?
+#   - show traveller: normal
+#   - traveller says: Marco's is one of the hardest, but once you learn it, it becomes a lot easier to write the stories just how you want them.
+#   - traveller says: One last lesson and you can start writing!
+#   - show traveller: normal
+#   - traveller says: For this lesson, I'll be your teacher.
+#   - traveller says: It'll be a lot of fun!
+#   - show traveller: normal
+#   - effect SHOWTITLE: 
+#     title: Chapter 6
+#     subtitle: Graphical User Interface
+#   - traveller says: So, a Graphical User Interface, or GUI, constitutes most of the look and feel of your story.
+#   - traveller says: The graphical elements of your story are the backgrounds, the characters and the cgs.
+#   - traveller says: We could say that anything else is part of the GUI.
+#   - traveller says: So, the menus, the text box where we show dialogue, the font of the texts, the buttons of the quick menu here in the corner.
+#   - traveller says: All of that is part of the GUI.
+#   - traveller says: The GUI is not exactly part of the story, but it's great to set the mood, to show the story's aesthetic.
+#   - traveller says: So a period drama and a cyberpunk story shouldn't look the same.
+#   - traveller says: Also, the GUI will depend on the image resolution used.
+#   - traveller says: A little pixel art game will need a specific GUI, and so would a big HD one.
+#   - traveller says: With RenJS we have an easy way to make the GUI look exactly the way we need.
+#   - traveller says: Configuring of the GUI happens inside the file 'GUI.yaml'.
+#   - show traveller: normal AT RIGHT WITH MOVE
+#   - traveller says: Let's check it!
+#   - show lessonGUI:
+#   - traveller says: The first tag we use is simpleGUI.
+#   - traveller says: Inside it, the first tag is assets.
+#   - traveller says: Just as we did with the story setup, here we need to declare each resource with a file and tag.
+#   - traveller says: First of all, we have a fonts list.
+#   - traveller says: For this GUI we only use one font, called auditmat-mono.
+#   - traveller says: Fonts are declared in a special way.
+#   - traveller says: To find them, we first have to load them in a web style.
+#   - traveller says: Let's check for a moment the index.html file.
+#   - show lessonGUIFonts:
+#   - traveller says: Here we tell the web page we need a 'font-face'.
+#   - traveller says: The 'font-family' property is the name we'll be referencing in our GUI file.
+#   - traveller says: And the 'src' indicates where to find the font file.
+#   - traveller says: "We have our font file inside the 'assets/gui' folder."
+#   - traveller says: You can go check!
+#   - hide lessonGUIFonts:
+#   - traveller says: So, for every font you need to use on your game, you have to declare a 'font-face'.
+#   - traveller says: And then list them on your GUI file.
+#   - show traveller: normal
+#   - traveller says: You can find free fonts to use on sites like Google Fonts!
+#   - show traveller: normal
+#   - hide lessonGUI:
+#   - traveller says: Next thing is images.
+#   - show lessonGUIImages:
+#   - traveller says: Here we list the images we will use with their file names.
+#   - traveller says: Pay attention to the tag names, they are important.
+#   - traveller says: "'mainBackground' will be the background of the main menu."
+#   - traveller says: "'settingsBackground' will be the background of the settings menu."
+#   - traveller says: "'sliderFull' will be the image used to show the a slider all full, in the settings menu."
+#   - traveller says: You can check how those look if you open the settings menu right now and change some of the values.
+#   - traveller says: "'messageBox' is the box where dialogue and text will appear. It's where this text is showing right now."
+#   - traveller says: And 'nameBox' is the little box where the character's name is displayed. Right now it says travellerlene.
+#   - traveller says: "'ctc' means click to continue, and it's the little image that blinks when the story is waiting for you to click."
+#   - traveller says: Your gui could have no nameBox and no ctc, but you definitely need the rest.
+#   - hide lessonGUIImages:
+#   - show lessonGUISpritesheets:
+#   - traveller says: Next you load the spritesheets.
+#   - traveller says: A spritesheet is an image that contains different frames of the same image.
+#   - traveller says: That's why after the file, you need to add the width and height of the frame.
+#   - traveller says: This is particularly useful to load animations and buttons.
+#   - traveller says: So let's see what spritesheets we have.
+#   - traveller says: And what images we have.
+#   - traveller says: A bunch of buttons! Start, load, save, settings and return button from the main and settings menu.
+#   - traveller says: Then the quick menu buttons. The quick menu refers to this little menu we have in the corner.
+#   - traveller says: It let's you autoplay, skip play, save and open the settings menu. So we need a button for each of those.
+#   - traveller says: Then we have the choice box.
+#   - traveller says: And the interrupt box.
+#   - traveller says: If you open the interrupt box image, you'll notice it has 4 frames.
+#   - traveller says: The first two are for the normal interrupt. 
+#   - traveller says: And the last two are for and interrupt that's just about to disappear.
+#   - traveller says: It should look more urgent.
+#   - hide lessonGUISpritesheets:
+#   - traveller says: The last kind of asset to declare is audio.
+#   - show lessonGUIAudio:
+#   - traveller says: The only thing we load here is the main menu music.
+#   - hide lessonGUIAudio:
+#   - traveller says: After loading all of the assets, we need to configure how each part of the gui looks.
+#   - traveller says: Where the buttons are located, where the text should go, etc.
+#   - traveller says: We start with the HUD, the head-up display.
+#   - traveller says: That's all the GUI parts we'll use during the story.
+#   - show lessonGUIHUD:
+#   - traveller says: First thing inside 'hud' is the area.
+#   - traveller says: The area of the hud is where your quick menu buttons are.
+#   - traveller says: It's a rectangle that envelops them, it doesn't have to be perfect.
+#   - traveller says: You could have many rectangles if the buttons are no all together.
+#   - traveller says: This area is important because it will tell the game that a 'click' inside them doesn't count as a 'story click'.
+#   - traveller says: A story click being a click to make the story advance, for example, when the game is waiting for you to read a text.
+#   - traveller says: We can not define the area, but then, whenever the player clicks on a button, the story will advance too.
+#   - traveller says: That could bring unexpected problems.
+#   - traveller says: So it's better to just check where your hud buttons are and make a rectangle around them to define as hud area.
+#   - traveller says: After the area we have the 'message' tag.
+#   - traveller says: That's the box where all the story text will be displayed.
+#   - traveller says: By convention, it will use the 'messageBox' asset.
+#   - traveller says: But we need to tell it where to locate it.
+#   - traveller says: And then, inside it, where the text will be located, and how it will look.
+#   - hide lessonGUIHUD:
+#   - show lessonGUIHUDcont:
+#   - traveller says: Then we have the name box. Same as before, you add position and text style.
+#   - traveller says: One important thing to notice here is the position must be relative the message box.
+#   - traveller says: The ctc doesn't have any text, but it can be animated or not.
+#   - traveller says: If it's not animated, then it will be made to blink programatically.
+#   - traveller says: But it can be if instead of it being a static image, you load it as a spritesheet.
+#   - traveller says: In that case, you should set the 'animated' parameter to true.
+#   - traveller says: The ctc's position is also relative to the message box.
+#   - hide lessonGUIHUDcont:
+#   - show lessonGUIHUDcont2:
+#   - traveller says: Next elements on the 'hud' are the choice and interrupt boxes.
+#   - traveller says: You can give them a position, like the rest of the elements.
+#   - traveller says: But if you don't, these boxes will be located in the middle of the screen.
+#   - traveller says: You can see how that looks on the choices of this story.
+#   - traveller says: If you set a position, then the list of choices will be added from that point down.
+#   - traveller says: The 'separation' in the choice means how far one box will be from the other.
+#   - traveller says: This number should be bigger than the box height itself, or else one box will be on top of the other.
+#   - traveller says: Last thing is text style.
+#   - traveller says: You can choose a different font for the interrupt.
+#   - hide lessonGUIHUDcont2:
+#   - traveller says: If you want to know more about text styles, you can find information about them in the Phaser documentation.
+#   - traveller says: Now, the last elements on the 'hud' are the buttons for the quick menu.
+#   - show lessonGUIHUDcont3:
+#   - traveller says: The tag name for each button is very important, since it's what will determine their action when you press them.
+#   - traveller says: The available buttons we have are 'auto', 'skip', 'save' and 'settings'.
+#   - traveller says: You don't need all of them in your GUI, of course. You can have only the buttons you deem necessary.
+#   - hide lessonGUIHUDcont3:
+#   - traveller says: And that's all you need to create your 'hud'.
+#   - traveller says: But the GUI also has menus.
+#   - traveller says: A menu is basically a background with buttons on it. It can have music, and it can have other elements like sliders.
+#   - traveller says: Let's see how to do it.
+#   - show lessonGUIMenu:
+#   - traveller says: The first menu we have is 'main'. That's the main menu. As a convention, it will use the background 'mainMenu'.
+#   - traveller says: It has music, so we have to indicate what music tag it is we should reproduce.
+#   - traveller says: And then it has buttons.
+#   - traveller says: The buttons are configured in the same way as before.
+#   - traveller says: A meaningful tag, a position and a sprite.
+#   - hide lessonGUIMenu:
+#   - show lessonGUISliders:
+#   - traveller says: The settings menu is very similar to the main menu, but it has sliders.
+#   - traveller says: The sliders, just like the buttons, have a meaningful name.
+#   - traveller says: The name indicates what property will be modified by that slider.
+#   - traveller says: Then a position, and the sprite of the slider when it's full.
+#   - hide lessonGUISliders:
+#   - traveller says: Wow, that was longer than expected.
+#   - traveller says: But that completes the whole of this course.
+#   - traveller says: Now we need to hurry!
+#   - scene: graduation
   
-graduation:
-  - show street_afternoon:
-  - show traveller: AT 300,600 WITH FADE
-    flipped: false
-  - show liz: happy AT 500,600 WITH FADE
-  - show traveller: normal AT RIGHT WITH FADE
-  - show marco: happy AT LEFT WITH FADE
-  - traveller says: So, this is the big day.
-  - traveller says: You can now go out in the world and write your own stories.
-  - show traveller: normal
-  - traveller says: I'm so proud of you!
-  - liz says: I'm looking forward to read all of your stories.
-  - traveller says: Let's keep in touch!
-  - marco says: And don't be scared of making it complex!
-  - traveller says: You can do it!
-  - effect ROLLINGCREDITS:
-    endGame: true
-    text:
-      - RenJS developed by
-      - lunafromthemoon
-      - null
-      - Inspired by Ren'Py
-      - Powered by PhaserJS
-      - null
-      - null
-      - Thanks for playing
-      - The Tutorial Game
-      - null
-      - written by
-      - lunafromthemoon
-      - null
-      - edited by
-      - rumpelcita
-      - null
-      - background art and cgs by
-      - konett
-      - null
-      - characters by
-      - Shida
-      - null
-      - music by
-      - Evan Schaeffer
+# graduation:
+#   - show street_afternoon:
+#   - show traveller: AT 300,600 WITH FADE
+#     flipped: false
+#   - show liz: happy AT 500,600 WITH FADE
+#   - show traveller: normal AT RIGHT WITH FADE
+#   - show marco: happy AT LEFT WITH FADE
+#   - traveller says: So, this is the big day.
+#   - traveller says: You can now go out in the world and write your own stories.
+#   - show traveller: normal
+#   - traveller says: I'm so proud of you!
+#   - liz says: I'm looking forward to read all of your stories.
+#   - traveller says: Let's keep in touch!
+#   - marco says: And don't be scared of making it complex!
+#   - traveller says: You can do it!
+#   - effect ROLLINGCREDITS:
+#     endGame: true
+#     text:
+#       - RenJS developed by
+#       - lunafromthemoon
+#       - null
+#       - Inspired by Ren'Py
+#       - Powered by PhaserJS
+#       - null
+#       - null
+#       - Thanks for playing
+#       - The Tutorial Game
+#       - null
+#       - written by
+#       - lunafromthemoon
+#       - null
+#       - edited by
+#       - rumpelcita
+#       - null
+#       - background art and cgs by
+#       - konett
+#       - null
+#       - characters by
+#       - Shida
+#       - null
+#       - music by
+#       - Evan Schaeffer
 
-invitationScene:
-  - show phone2: AT 400,300
-  - play ringtoneSFX:
-  - traveller says: Told you! It's probably travellerlene trying to convince you to go to that party.
-  - choice:
-    - Pick up the phone:
-      - traveller says: Hey! I'm glad you're not asleep yet! 
-      - traveller says: There's this party tonight and I wanted you to come.
-      - traveller says: So what do you say?
-      - choice:
-        - Sounds like fun!:
-          - scene: partyScene
-        - I'm really tired:
-          - traveller says: Oh well, next time it is then. Have a good night!
-    - Let it ring:
-      - traveller says: Brutal! You ain't even picking up.
-  - scene: dormsScene
+# invitationScene:
+#   - show phone2: AT 400,300
+#   - play ringtoneSFX:
+#   - traveller says: Told you! It's probably travellerlene trying to convince you to go to that party.
+#   - choice:
+#     - Pick up the phone:
+#       - traveller says: Hey! I'm glad you're not asleep yet! 
+#       - traveller says: There's this party tonight and I wanted you to come.
+#       - traveller says: So what do you say?
+#       - choice:
+#         - Sounds like fun!:
+#           - scene: partyScene
+#         - I'm really tired:
+#           - traveller says: Oh well, next time it is then. Have a good night!
+#     - Let it ring:
+#       - traveller says: Brutal! You ain't even picking up.
+#   - scene: dormsScene
 
 varsScene:
   # numeric variables

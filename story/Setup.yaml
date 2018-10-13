@@ -8,6 +8,7 @@ backgrounds:
   # street_morning: assets/backgrounds/school_front_morning.jpg
   # street_afternoon: assets/backgrounds/school_front_afternoon.jpg
   # store: assets/backgrounds/store.jpg
+  star_background: assets/backgrounds/starry_background.png
   kepler: assets/backgrounds/kepler_solar system_2.png
   inside_ship: assets/backgrounds/spaceship-inside_2.png
   ice: assets/backgrounds/ice_landscape.png
@@ -55,6 +56,7 @@ characters:
       angryC: assets/characters/Char4Angry.png
 cgs:
   phone1: assets/objects/phone1.png
+  iceplanet: assets/objects/ice_planet.png
   phone2: assets/objects/phone2.png
   spaceship: assets/objects/spaceship-outside.png
   folders: assets/lessons/folders.png
