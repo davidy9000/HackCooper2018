@@ -14,11 +14,11 @@ characters:
     displayName: Traveller
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/astronaut_2_v1.png
-      happy: assets/characters/astronaut_1_v1.png
+      happy: assets/characters/astronaut_2_v1.png
+      normal: assets/characters/astronaut_1_v1.png
       angry: assets/characters/astronaut_3.png
-      normalC: assets/characters/astronaut_2_v2.png
-      happyC: assets/characters/astronaut_1_v2.png
+      happyC: assets/characters/astronaut_2_v2.png
+      normalC: assets/characters/astronaut_1_v2.png
       angryC: assets/characters/Char3Angry.png
   liz:
     displayName: Liz
