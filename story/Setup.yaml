@@ -8,16 +8,17 @@ backgrounds:
   street_morning: assets/backgrounds/school_front_morning.jpg
   street_afternoon: assets/backgrounds/school_front_afternoon.jpg
   store: assets/backgrounds/store.jpg
+  kepler: assets/backgrounds/kepler_solar system_2.png
 characters:
-  deuzi:
-    displayName: Deuzilene
+  traveller:
+    displayName: Traveller
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/Char3NormalSchool.png
-      happy: assets/characters/Char3HappySchool.png
-      angry: assets/characters/Char3AngrySchool.png
-      normalC: assets/characters/Char3Normal.png
-      happyC: assets/characters/Char3Happy.png
+      normal: assets/characters/astronaut_2_v1.png
+      happy: assets/characters/astronaut_1_v1.png
+      angry: assets/characters/astronaut_3.png
+      normalC: assets/characters/astronaut_2_v2.png
+      happyC: assets/characters/astronaut_1_v2.png
       angryC: assets/characters/Char3Angry.png
   liz:
     displayName: Liz
