@@ -1,5 +1,5 @@
 # HackCooper2018
-A small project made at HackCooper2018 using RenJS. This project is a visual novel involving space travel with the storyline based on the Keppler-444 star system.
+A small project made at HackCooper2018 using RenJS. This project is a visual novel involving space travel in some star system.
 
 Visit website here:
 https://davidy9000.github.io/HackCooper2018/
