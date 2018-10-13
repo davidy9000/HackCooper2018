@@ -13,7 +13,7 @@ start:
   - show inside_ship: WITH FADE
   - show traveller: normal WITH FADE
   - traveller says: This trip should leave us with more than a month's supply of water
-  - traveller says: -ends transmission-
+  - system says: -ends transmission-
   - hide traveller: WITH FADE
   - show kepler: WITH FADE
   - show spaceship: WITH FADE
@@ -23,7 +23,9 @@ start:
   - traveller says: god I love these new F450X fissure reactors.
   - hide spaceship: WITH FADE
   - hide kepler:
-  - show 
+  - play ocean:
+  - show ice: WITH FADE
+  - show traveller: happy WITH FADE
   - traveller says: If you are familiar with any of those you have an advantage.
   - traveller says: And if not...
   # - show traveller: normal

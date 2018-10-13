@@ -10,6 +10,7 @@ backgrounds:
   # store: assets/backgrounds/store.jpg
   kepler: assets/backgrounds/kepler_solar system_2.png
   inside_ship: assets/backgrounds/spaceship-inside_2.png
+  ice: assets/backgrounds/ice_landscape.png
 characters:
   traveller:
     displayName: Traveller
