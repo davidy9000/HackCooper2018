@@ -1,8 +1,11 @@
 
 start:
   - play morningBGM:
+  - effect SHOWTITLE: 
+    title: Chapter 1
+    subtitle: Ice Hauling 
   - show kepler: WITH FADE
-  - show traveller: happy AT CENTER WITH FADE
+  - show traveller: normal AT CENTER WITH FADE
   - traveller says: Welcome to our Tutorial Game!
   - traveller says: My name is travellerlene and I'll be your guide.
   - show traveller: normal
@@ -11,30 +14,27 @@ start:
   - traveller says: RenJS is inspired by Ren'Py and based on PhaserJS.
   - traveller says: If you are familiar with any of those you have an advantage.
   - traveller says: And if not...
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: No problem!
   - traveller says: RenJS is made so the text of your story is written intuitively like a script. 
   - show traveller: normal
   - traveller says: Once you learn the structure, there's no limit to what you can create.
   - traveller says: So let's start with...
-  - effect SHOWTITLE: 
-    title: Chapter 1
-    subtitle: The basics 
   - traveller says: First thing we'll check is the file structure.
   - traveller says: That is, all the files you need for your game to work properly.
   - traveller says: We'll use this game as an example.
   - traveller says: Have you downloaded it yet?
   - choice:
     - I have it!:
-      - show traveller: happy
+      - show traveller: normal
       - traveller says: Great! What a hardworking student.
     - Not yet:
-      - show traveller: angry
+      - show traveller: normal
       - traveller says: What are you waiting for!?
       - traveller says: Go do it, I'll wait...
       - choice:
         - I have it!:
-          - show traveller: happy
+          - show traveller: normal
           - traveller says: Good! Let's continue.
   - show traveller: normal
   - traveller says: Now, open the root folder of this game.
@@ -53,176 +53,176 @@ start:
   - traveller says: YAML is a human readable data serialization language.
   - traveller says: That means that the files contain data in a structure that you can read easily.
   - traveller says: And how do you open and edit them?
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: With your favourite text editor!
   - traveller says: Mine is Sublime Text, a lightweight and multiplatform text editor.
   - show traveller: normal
   - traveller says: In any case, the most important thing about YAML files is that indentation is super important.
   - traveller says: If you screw up the indentation the game won't even load!
-  - show traveller: angry
+  - show traveller: normal
   - traveller says: So be very careful about it. Only two spaces per level!
   - show traveller: normal
   - traveller says: Ok, that was a lot of information, don't you think?
   - choice:
     - Yes, I'm already tired:
-      - show traveller: happy
+      - show traveller: normal
       - traveller says: I was hoping you'd say that!
       - traveller says: You can save from the quick menu here on the side and return later!
     - No, I want to know more:
-      - show traveller: happy
+      - show traveller: normal
       - traveller says: I knew it!
       - traveller says: I have a feeling you're not stopping until you write your first story
       - traveller says: Isn't that exciting?
   - show traveller: normal
   - traveller says: All right, I'm going to take a break anyways.
   - traveller says: But I'm leaving you in good hands.
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: Good luck!
   - hide traveller: WITH FADE
   - scene: storySetup
 
 storySetup:
   - show school_morning:
-  - show jair:
-  - jair says: So you're the new student.
-  - jair says: I've heard a lot about you from traveller.
-  - jair says: She gets easily excited.
-  - show jair: angry
-  - jair says: But with me, you'll have to prove yourself first.
-  - jair says: Do you have what it takes to be a visual novel writer?
-  - show jair: normal
-  - jair says: We'll see.
-  - jair says: I'm Jair, btw.
-  - jair says: But you should know that, since my name is on display right above the text box.
-  - jair says: I'm here to show you how to setup your story.
+  - show traveller:
+  - traveller says: So you're the new student.
+  - traveller says: I've heard a lot about you from traveller.
+  - traveller says: She gets easily excited.
+  - show traveller: normal
+  - traveller says: But with me, you'll have to prove yourself first.
+  - traveller says: Do you have what it takes to be a visual novel writer?
+  - show traveller: normal
+  - traveller says: We'll see.
+  - traveller says: I'm traveller, btw.
+  - traveller says: But you should know that, since my name is on display right above the text box.
+  - traveller says: I'm here to show you how to setup your story.
   - effect SHOWTITLE: 
     title: Chapter 2
     subtitle: Setting up the story
-  - jair says: All the setup is contained in the Setup.yaml file.
-  - jair says: What this means is.
-  - jair says: All your characters, music, sfx and everything else you're planning to use on the story.
-  - jair says: Needs to be declared on this file.
-  - jair says: And of course, you need to know everything before even start to write your story.
-  - jair says: What kind of writer doesn't though...
+  - traveller says: All the setup is contained in the Setup.yaml file.
+  - traveller says: What this means is.
+  - traveller says: All your characters, music, sfx and everything else you're planning to use on the story.
+  - traveller says: Needs to be declared on this file.
+  - traveller says: And of course, you need to know everything before even start to write your story.
+  - traveller says: What kind of writer doesn't though...
   - wait: 300
-  - show jair: happy
-  - jair says: Just joking!
-  - jair says: You won't always know what things you need for a story.
-  - jair says: So every time you add something, remember to also add it to the setup file.
-  - show jair: normal
-  - jair says: Let's see how it's made.
-  - show jair: AT RIGHT WITH MOVE
+  - show traveller: normal
+  - traveller says: Just joking!
+  - traveller says: You won't always know what things you need for a story.
+  - traveller says: So every time you add something, remember to also add it to the setup file.
+  - show traveller: normal
+  - traveller says: Let's see how it's made.
+  - show traveller: AT RIGHT WITH MOVE
   - show setupbg: AT 400,350 WITH FADE
-  - jair says: First tag you need is setup.
-  - jair says: Inside the setup, indented by two spaces you declare each kind of object.
-  - jair says: The first we have is backgrounds.
-  - jair says: Each background has a tag, the name that will be used to refer to that background on the story.
-  - jair says: And the path to where the background image is located.
-  - jair says: If you go to the game's assets folder, you'll find all the images we can use here.
-  - show jair: happy
-  - jair says: Seems like we have an afternoon background.
-  - jair says: Let's use it so I can go home sooner.
+  - traveller says: First tag you need is setup.
+  - traveller says: Inside the setup, indented by two spaces you declare each kind of object.
+  - traveller says: The first we have is backgrounds.
+  - traveller says: Each background has a tag, the name that will be used to refer to that background on the story.
+  - traveller says: And the path to where the background image is located.
+  - traveller says: If you go to the game's assets folder, you'll find all the images we can use here.
+  - show traveller: normal
+  - traveller says: Seems like we have an afternoon background.
+  - traveller says: Let's use it so I can go home sooner.
   - show school_afternoon: WITH FUSION
   - hide setupbg: WITH FADE
-  - jair says: Well, time to go home.
-  - jair says: See you.
-  - show jair: normal AT LEFT WITH MOVE
-  - show traveller: angry AT RIGHT
+  - traveller says: Well, time to go home.
+  - traveller says: See you.
+  - show traveller: normal AT LEFT WITH MOVE
+  - show traveller: normal AT RIGHT
     flipped: true
   - traveller says: Not so fast!
-  - show jair: normal
+  - show traveller: normal
     flipped: true
-  - jair says: Uh oh.
+  - traveller says: Uh oh.
   - traveller says: Where do you think you're going? There's a lot more to say about the setup!
-  - jair says: Your student is smart enought to get it without my help.
+  - traveller says: Your student is smart enought to get it without my help.
   - traveller says: What? Do you agree with that?
   - choice:
     - Yeah, I checked the file by myself:
       - show traveller: normal
       - traveller says: Alright, I guess you can continue with more advanced lessons then...
-      - show jair: happy
-      - jair says: See, told you not to treat 'em like a baby.
-      - show traveller: angry
+      - show traveller: normal
+      - traveller says: See, told you not to treat 'em like a baby.
+      - show traveller: normal
       - traveller says: Shut up, you! We'll have a talk later.
-      - hide jair: WITH FADE
+      - hide traveller: WITH FADE
       - show traveller: normal
       - traveller says: Ok, the next lesson starts soon, maybe you should save and rest before moving on.
       - traveller says: It's going to be long, but it'll probably be easy for you.
-      - show traveller: happy
+      - show traveller: normal
       - traveller says: And the teacher is great! She's my best friend.
       - traveller says: Good luck!
       - scene: writingTheStory
     - We barely saw the first part!:
       - traveller says: Come back here you ratbag, and finish the lesson!
-      - jair says: Ok boss, don't worry.
+      - traveller says: Ok boss, don't worry.
       - hide traveller: WITH FADE
-  - show jair: angry
-  - jair says: What a snitch.
-  - show jair: normal
-  - jair says: Anyway, let's see the next part.
-  - jair says: Characters.
-  - jair says: The characters are... you know what a character is, come on.
+  - show traveller: normal
+  - traveller says: What a snitch.
+  - show traveller: normal
+  - traveller says: Anyway, let's see the next part.
+  - traveller says: Characters.
+  - traveller says: The characters are... you know what a character is, come on.
   - show setupch: AT 400,300 WITH FADE
-  - jair says: Ok so, inside the characters tag, each character is declared after its own tag.
-  - jair says: Same as the backgrounds, this tag will be used to refer to this character on the text of your story.
-  - jair says: Every time you need to use travellerlene, you will use her tag, traveller.
-  - jair says: Characters also have a display name, that's the name that will apear on the name box when we talk.
-  - jair says: The display name can have whitespaces, accents and whatever you want.
-  - jair says: If you omit it, the tag will be used as the name.
-  - jair says: The speech colour is the colour to write the name in the name box.
-  - jair says: And then you have a list of looks.
-  - jair says: A look is an image representing a state of the character.
-  - jair says: You always need a normal look, that will be the default.
-  - jair says: And you can have as many additional looks as you want.
-  - jair says: traveller here can be happy or angry.
-  - show jair: happy
-  - jair says: Her range of emotions is infinite though.
-  - jair says: Believe me.
-  - show jair: normal
+  - traveller says: Ok so, inside the characters tag, each character is declared after its own tag.
+  - traveller says: Same as the backgrounds, this tag will be used to refer to this character on the text of your story.
+  - traveller says: Every time you need to use travellerlene, you will use her tag, traveller.
+  - traveller says: Characters also have a display name, that's the name that will apear on the name box when we talk.
+  - traveller says: The display name can have whitespaces, accents and whatever you want.
+  - traveller says: If you omit it, the tag will be used as the name.
+  - traveller says: The speech colour is the colour to write the name in the name box.
+  - traveller says: And then you have a list of looks.
+  - traveller says: A look is an image representing a state of the character.
+  - traveller says: You always need a normal look, that will be the default.
+  - traveller says: And you can have as many additional looks as you want.
+  - traveller says: traveller here can be happy or angry.
+  - show traveller: normal
+  - traveller says: Her range of emotions is infinite though.
+  - traveller says: Believe me.
+  - show traveller: normal
   - hide setupch:
-  - jair says: Next up is cgs.
+  - traveller says: Next up is cgs.
   - show setupcgs: 400,350 WITH FADE
-  - jair says: CGs stands for Computer Graphics.
-  - jair says: It's an image that you can display and animate.
-  - show jair: angry
-  - jair says: It should have a better name, I know.
-  - jair says: But for now, it's what we have.
-  - show jair: normal
-  - jair says: Same as always, you have the cgs tag, and then each cgs has a tag and an image file.
-  - jair says: We have two phones.
-  - jair says: Could one of those be mine?
+  - traveller says: CGs stands for Computer Graphics.
+  - traveller says: It's an image that you can display and animate.
+  - show traveller: normal
+  - traveller says: It should have a better name, I know.
+  - traveller says: But for now, it's what we have.
+  - show traveller: normal
+  - traveller says: Same as always, you have the cgs tag, and then each cgs has a tag and an image file.
+  - traveller says: We have two phones.
+  - traveller says: Could one of those be mine?
   - show phone1: AT 600,300
   - show phone2: AT 380,300
-  - jair says: I don't think so!
+  - traveller says: I don't think so!
   - hide phone1:
   - hide phone2:
   - hide setupcgs:
-  - jair says: "And to finish: audio"
+  - traveller says: "And to finish: audio"
   - show setupaudio: AT 400,350
-  - jair says: You can have music, and you can have sfx.
-  - jair says: The music will usually be looped, while the sfx will play just once.
-  - jair says: For example, the current background music is morningBGM.
-  - jair says: Let's make a phone call and check the ringtone...
+  - traveller says: You can have music, and you can have sfx.
+  - traveller says: The music will usually be looped, while the sfx will play just once.
+  - traveller says: For example, the current background music is morningBGM.
+  - traveller says: Let's make a phone call and check the ringtone...
   - show phone1: AT 400,300
   - play ringtoneSFX:
   - text: Tururu Ruru Ruru Ruruuuu
-  - jair says: This has to be traveller's.
-  - show traveller: angry AT RIGHT
+  - traveller says: This has to be traveller's.
+  - show traveller: normal AT RIGHT
     flipped: true
   - traveller says: Hey! That's my phone!
   - hide phone1:
   - hide traveller: WITH FADE
-  - show jair: happy
-  - jair says: I knew it!
-  - show jair: normal
-  - jair says: Anyway, that's it, lesson over.
+  - show traveller: normal
+  - traveller says: I knew it!
+  - show traveller: normal
+  - traveller says: Anyway, that's it, lesson over.
   - hide setupaudio:
-  - jair says: I'm going to try and find the place where this bar music is playing.
-  - show jair: happy
-  - jair says: You're not entirely bad.
-  - jair says: See you around.
-  - jair says: And don't get lost, your next class is over there!
-  - hide jair: WITH FADE
+  - traveller says: I'm going to try and find the place where this bar music is playing.
+  - show traveller: normal
+  - traveller says: You're not entirely bad.
+  - traveller says: See you around.
+  - traveller says: And don't get lost, your next class is over there!
+  - hide traveller: WITH FADE
   - scene: writingTheStory
 
 writingTheStory:
@@ -283,7 +283,7 @@ writingTheStory:
   - liz says: But how do we hide them?
   - liz says: Easily! Just hide them!
   - show scenehide:
-  - liz says: In this scene Jair is trying to annoy travellerlene once again.
+  - liz says: In this scene traveller is trying to annoy travellerlene once again.
   - show liz: angry
   - liz says: He has her phone!
   - show liz: normal
@@ -318,23 +318,23 @@ interval:
   - show room_night:
   - show room_night_light: WITH FUSION
   - play cicadas: WITH FADE
-  - show traveller: normalC WITH FADE
+  - show traveller: normal WITH FADE
   - traveller says: Hey! I knew I was going to find you here.
   - traveller says: Were you going to sleep already?
   - traveller says: I know you're new in town, so I thought I could show you around a bit.
   - traveller says: What do you think?
   - interrupt 6:
     - Isn't it a bit awkward???:
-      - show traveller: angryC
+      - show traveller: normal
       - traveller says: What do you mean?
       - traveller says: Because I'm your teacher?  
-      - show traveller: happyC
+      - show traveller: normal
       - traveller says: We're almost the same age!
-      - show traveller: normalC
+      - show traveller: normal
       - traveller says: You might be teaching some years from now too. 
-      - show traveller: angryC
+      - show traveller: normal
       - traveller says: Then you'll see how awkward it is to be called professor and be treatead like and old person.
-      - show traveller: normalC
+      - show traveller: normal
       - traveller says: Anyway, as I was saying...
   - traveller says: You probably know it already, but this is a small town.
   - traveller says: There's not much to see, really.
@@ -342,7 +342,7 @@ interval:
   - traveller says: Have you been there already?
   - traveller says: You can't miss it.
   - traveller says: So, ready to go?
-  - show traveller: happyC
+  - show traveller: normal
   - traveller says: Let's go!
   - scene: storeAtNight
 
@@ -352,33 +352,33 @@ storeAtNight:
   - show liz: happyC WITH FADE
   - liz says: traveller!!! Over here!
   - show liz: happyC AT 500,600 WITH MOVE
-  - show traveller: happyC AT 300,600 WITH FADE
+  - show traveller: normal AT 300,600 WITH FADE
   - traveller says: Liz! How are you?
   - show liz: normalC
   - liz says: Great! I just got here and was wondering where you were.
-  - show traveller: normalC
+  - show traveller: normal
   - traveller says: I stopped by the dorms to get my new student, and show them around.
-  - show jair: happyC AT LEFT WITH FADE
+  - show traveller: normal AT LEFT WITH FADE
     flipped: true
-  - jair says: You should stop acting like a mama duck to your students.
-  - show traveller: angryC
+  - traveller says: You should stop acting like a mama duck to your students.
+  - show traveller: normal
     flipped: true
   - traveller says: Are you jealous for not getting all the attention now?
-  - show jair: angryC
-  - jair says: Yeah, right...
+  - show traveller: normal
+  - traveller says: Yeah, right...
   - show marco: normalC WITH FADE AT RIGHT
   - marco says: You two fighting again?
   - show liz: happyC
   - liz says: Seems like a normal day.
-  - show traveller: angryC
+  - show traveller: normal
     flipped: false
   - traveller says: Hey! You're supposed to be on my side.
   - traveller says: He started it!
   - show liz: normalC
-  - show traveller: normalC
+  - show traveller: normal
   - traveller says: Anyway, good to see you Marco.
-  - show jair: happyC
-  - jair says: Yes, what's the special occasion that made you crawl out of your hole.
+  - show traveller: normal
+  - traveller says: Yes, what's the special occasion that made you crawl out of your hole.
   - show marco: happyC
   - marco says: Have to get some food before it starts raining.
   - show liz: angryC
@@ -388,19 +388,19 @@ storeAtNight:
   - hide marco:
   - traveller says: Maybe we should go too, before...
   - ambient RAIN:
-  - jair says: I knew something weird was going to happend when I saw that guy.
+  - traveller says: I knew something weird was going to happend when I saw that guy.
   - traveller says: How could this happen so suddenly?
   - show liz: normalC
   - liz says: Well, it's rather easy.
   - liz says: Ambients and effects.
-  - jair says: Come on! Not on the streets!
+  - traveller says: Come on! Not on the streets!
   - show liz: angryC
-  - show traveller: angryC
+  - show traveller: normal
     flipped: true
   - traveller says: That's it! You and I are going to have a serious talk!
-  - jair says: If you can catch me!
-  - hide jair:
-  - show traveller: angryC AT LEFT WITH MOVE
+  - traveller says: If you can catch me!
+  - hide traveller:
+  - show traveller: normal AT LEFT WITH MOVE
   - hide traveller: WITH FADE
   - show liz: happyC
   - liz says: I know how that's going to end.
@@ -465,7 +465,7 @@ backToTheRoom:
 day2:
   - play morningBGM:
   - show school_morning: WITH FADE
-  - show traveller: happy AT CENTER WITH FADE
+  - show traveller: normal AT CENTER WITH FADE
   - traveller says: Welcome back!
   - traveller says: How was your first night away from home?
   - show traveller: normal
@@ -737,13 +737,13 @@ lessonStoryFlux:
 
 lastClass:
   - show school_afternoon: WITH FUSION
-  - show traveller: happy WITH FADE
+  - show traveller: normal WITH FADE
     flipped: true
   - traveller says: Hi! Did you have fun today?
   - show traveller: normal
   - traveller says: Marco's is one of the hardest, but once you learn it, it becomes a lot easier to write the stories just how you want them.
   - traveller says: One last lesson and you can start writing!
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: For this lesson, I'll be your teacher.
   - traveller says: It'll be a lot of fun!
   - show traveller: normal
@@ -761,7 +761,7 @@ lastClass:
   - traveller says: A little pixel art game will need a specific GUI, and so would a big HD one.
   - traveller says: With RenJS we have an easy way to make the GUI look exactly the way we need.
   - traveller says: Configuring of the GUI happens inside the file 'GUI.yaml'.
-  - show traveller: happy AT RIGHT WITH MOVE
+  - show traveller: normal AT RIGHT WITH MOVE
   - traveller says: Let's check it!
   - show lessonGUI:
   - traveller says: The first tag we use is simpleGUI.
@@ -781,7 +781,7 @@ lastClass:
   - hide lessonGUIFonts:
   - traveller says: So, for every font you need to use on your game, you have to declare a 'font-face'.
   - traveller says: And then list them on your GUI file.
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: You can find free fonts to use on sites like Google Fonts!
   - show traveller: normal
   - hide lessonGUI:
@@ -893,14 +893,14 @@ graduation:
   - show traveller: AT 300,600 WITH FADE
     flipped: false
   - show liz: happy AT 500,600 WITH FADE
-  - show jair: happy AT RIGHT WITH FADE
+  - show traveller: normal AT RIGHT WITH FADE
   - show marco: happy AT LEFT WITH FADE
   - traveller says: So, this is the big day.
   - traveller says: You can now go out in the world and write your own stories.
-  - show traveller: happy
+  - show traveller: normal
   - traveller says: I'm so proud of you!
   - liz says: I'm looking forward to read all of your stories.
-  - jair says: Let's keep in touch!
+  - traveller says: Let's keep in touch!
   - marco says: And don't be scared of making it complex!
   - traveller says: You can do it!
   - effect ROLLINGCREDITS:
@@ -934,7 +934,7 @@ graduation:
 invitationScene:
   - show phone2: AT 400,300
   - play ringtoneSFX:
-  - jair says: Told you! It's probably travellerlene trying to convince you to go to that party.
+  - traveller says: Told you! It's probably travellerlene trying to convince you to go to that party.
   - choice:
     - Pick up the phone:
       - traveller says: Hey! I'm glad you're not asleep yet! 
@@ -946,7 +946,7 @@ invitationScene:
         - I'm really tired:
           - traveller says: Oh well, next time it is then. Have a good night!
     - Let it ring:
-      - jair says: Brutal! You ain't even picking up.
+      - traveller says: Brutal! You ain't even picking up.
   - scene: dormsScene
 
 varsScene:
@@ -978,7 +978,7 @@ varsScene:
   - traveller says: Let's check your score.
   - traveller says: "You have {score} points."
   - if ({score > 10}):
-    - show traveller: happy
+    - show traveller: normal
     - traveller says: You did great! Congratulations!
     - if ({name} == {favouriteStudent}):
       - traveller says: That's why you're my favourite student.
