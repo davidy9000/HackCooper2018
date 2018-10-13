@@ -1,6 +1,6 @@
 assets:
   fonts:
-    - audimat-mono
+    - gameboy
   images:
     mainBackground: assets/gui/menu.png
     settingsBackground: assets/gui/settings.png
@@ -34,7 +34,7 @@ hud:
       x: 36 
       y: 36
     textStyle:
-      font: 16pt audimat-mono
+      font: 16pt gameboy
       wordWrap: true
       wordWrapWidth: 545
       fill: "#ac9393"
@@ -43,7 +43,7 @@ hud:
       x: 36 
       y: -40
     textStyle:
-      font: 20pt audimat-mono
+      font: 20pt gameboy
       boundsAlignH: center
       boundsAlignV: middle
   ctc: 
@@ -54,13 +54,13 @@ hud:
   choice:
     separation: 95
     textStyle:
-      font: 20pt audimat-mono
+      font: 20pt gameboy
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#666666"
   interrupt:
     textStyle:
-      font: 20pt audimat-mono
+      font: 20pt gameboy
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#664b4b"        
