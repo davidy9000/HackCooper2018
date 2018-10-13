@@ -1,8 +1,8 @@
 body 
 {
-	background-color: #003399;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'gameboy', sans-serif;
 	text-align: center;
+    background-image: url(sitecontent/2148.png);
 }
 
 
@@ -45,4 +45,11 @@ hr {
      border-bottom: 1px solid #1f1209 ; 
     box-shadow: 0 20px 5px -20px #333;
  margin: -50px auto 10px;
+}
+@font-face {
+  font-family: 'gameboy';
+  src: url('assets/gui/gameboy.ttf');
+  src: url('assets/gui/gameboy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
