@@ -5,6 +5,7 @@ Visit website here:
 https://davidy9000.github.io/HackCooper2018/
 
 ## Authors
-* **David Yuen** [davidy9000](https://github.com/davidy9000)
-* **Josh Natis** [joshnatis](https://github.com/joshnatis)
-* **Pete**       [petewins](https://github.com/petewins)
+* **David** [davidy9000](https://github.com/davidy9000)
+* **Josh**  [joshnatis](https://github.com/joshnatis)
+* **Pete**  [petewins](https://github.com/petewins)
+* **Vlad**  [bvv218](https://github.com/bvv218)
